@@ -2,130 +2,104 @@
   "_comment": "Add each lab member's Google Scholar ID (the 'user=' param from their Scholar URL). Leave scholar_id blank if unknown — the scraper will search by name.",
   "members": [
     {
-      "name": "[Professor Name]",
-      "role": "pi",
-      "group": null,
-      "scholar_id": "REPLACE_WITH_PI_SCHOLAR_ID",
-      "scholar_url": ""
+      "name": "Meagan S. Mauter",
+      "role": "PI",
+      "groups": [],
+      "scholar_id": "04f-_PIAAAAJ&hl=en&oi=ao",
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
     },
     {
-      "name": "Dr. Sarah Chen",
+      "name": "Dr. Erin Musabandesu",
       "role": "postdoc",
-      "group": "separations",
+      "groups": ["energy flexibility", "water and wastewater"],
       "scholar_id": "",
-      "scholar_url": ""
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
     },
     {
-      "name": "Dr. Marcus Johnson",
+      "name": "Dr. Haochi Wu",
       "role": "postdoc",
-      "group": "water-systems",
+      "groups": ["energy flexibility"],
       "scholar_id": "",
-      "scholar_url": ""
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
     },
     {
-      "name": "Alice Wang",
-      "role": "phd",
-      "group": "separations",
+      "name": "Dr. Nitish Sarkar",
+      "role": "postdoc",
+      "groups": ["water and wastewater"],
       "scholar_id": "",
-      "scholar_url": ""
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
     },
     {
-      "name": "Bob Patel",
-      "role": "phd",
-      "group": "separations",
+      "name": "Akshay Rao",
+      "role": "phd student",
+      "groups": ["energy flexibility"],
       "scholar_id": "",
-      "scholar_url": ""
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
     },
     {
-      "name": "Carol Kim",
-      "role": "phd",
-      "group": "separations",
+      "name": "Caroline Adkins",
+      "role": "phd student",
+      "groups": ["energy flexibility"],
       "scholar_id": "",
-      "scholar_url": ""
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
     },
     {
-      "name": "David Torres",
-      "role": "phd",
-      "group": "energy-flexibility",
+      "name": "Fletcher Chapin",
+      "role": "phd student",
+      "groups": ["energy flexibility"],
       "scholar_id": "",
-      "scholar_url": ""
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
     },
     {
-      "name": "Emma Liu",
-      "role": "phd",
-      "group": "energy-flexibility",
+      "name": "Carson Tucker",
+      "role": "phd student",
+      "groups": ["energy flexibility"],
       "scholar_id": "",
-      "scholar_url": ""
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
     },
     {
-      "name": "Frank Okafor",
-      "role": "phd",
-      "group": "energy-flexibility",
+      "name": "Daly Wettermark",
+      "role": "phd student",
+      "groups": ["energy flexibility"],
       "scholar_id": "",
-      "scholar_url": ""
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
     },
     {
-      "name": "Grace Huang",
-      "role": "phd",
-      "group": "water-systems",
+      "name": "Gina Kittleson",
+      "role": "phd student",
+      "groups": ["energy flexibility"],
       "scholar_id": "",
-      "scholar_url": ""
-    },
-    {
-      "name": "Henry Park",
-      "role": "phd",
-      "group": "energy-flexibility",
-      "scholar_id": "",
-      "scholar_url": ""
-    },
-    {
-      "name": "Iris Martinez",
-      "role": "ms",
-      "group": "water-systems",
-      "scholar_id": "",
-      "scholar_url": ""
-    },
-    {
-      "name": "James Chen",
-      "role": "ms",
-      "group": "energy-flexibility",
-      "scholar_id": "",
-      "scholar_url": ""
-    },
-    {
-      "name": "Kate Williams",
-      "role": "ms",
-      "group": "separations",
-      "scholar_id": "",
-      "scholar_url": ""
-    },
-    {
-      "name": "Liam Robinson",
-      "role": "ms",
-      "group": "water-systems",
-      "scholar_id": "",
-      "scholar_url": ""
-    },
-    {
-      "name": "Dr. Peter Zhang",
-      "role": "alumni",
-      "group": null,
-      "scholar_id": "",
-      "scholar_url": ""
-    },
-    {
-      "name": "Dr. Quinn Taylor",
-      "role": "alumni",
-      "group": null,
-      "scholar_id": "",
-      "scholar_url": ""
-    },
-    {
-      "name": "Dr. Rachel Green",
-      "role": "alumni",
-      "group": null,
-      "scholar_id": "",
-      "scholar_url": ""
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
     }
   ]
 }
