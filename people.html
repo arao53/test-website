@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People — WE3 Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav class="nav">
+  <div class="container">
+    <a class="nav-logo" href="index.html">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="13" stroke="#3a9aaa" stroke-width="2"/>
+        <path d="M7 10l3.5 8L14 12l3.5 6L21 10" stroke="#3a9aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      WE3<span>Lab</span>
+    </a>
+    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── Page Header ─────────────────────────────────────── -->
+<div class="page-header">
+  <div class="container">
+    <h1>People</h1>
+    <p>Meet the researchers who make WE3 Lab possible — a diverse team united by curiosity, rigor, and a commitment to impact.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- ── Principal Investigator ──────────────────────── -->
+    <h2 class="people-section-title">Principal Investigator</h2>
+    <div class="people-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">
+      <div class="person-card" style="display:flex;gap:1.5rem;text-align:left;padding:1.75rem;align-items:flex-start">
+        <div class="person-avatar av-1" style="width:90px;height:90px;font-size:1.5rem;flex-shrink:0">PI</div>
+        <div>
+          <h4>[Professor Name]</h4>
+          <div class="role">Principal Investigator</div>
+          <p class="research-area" style="margin-top:.35rem">Associate Professor, Dept. of Civil &amp; Environmental Engineering. Research interests: environmental systems modeling, IoT sensing, energy-water nexus.</p>
+          <div class="links" style="justify-content:flex-start;margin-top:.75rem">
+            <a href="#">CV</a> &middot;
+            <a href="#">Google Scholar</a> &middot;
+            <a href="mailto:pi@university.edu">Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Postdoctoral Researchers ────────────────────── -->
+    <h2 class="people-section-title">Postdoctoral Researchers</h2>
+    <div class="people-grid">
+
+      <div class="person-card">
+        <div class="person-avatar av-1">SC</div>
+        <!-- Replace with: <div class="person-avatar"><img src="assets/images/people/sarah-chen.jpg" alt="Dr. Sarah Chen"></div> -->
+        <h4>Dr. Sarah Chen</h4>
+        <div class="role">Postdoctoral Researcher</div>
+        <p class="research-area">Environmental sensing, electrochemical sensors, water quality monitoring</p>
+        <div class="links">
+          <a href="#">Scholar</a> &middot; <a href="#">CV</a>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-2">MJ</div>
+        <h4>Dr. Marcus Johnson</h4>
+        <div class="role">Postdoctoral Researcher</div>
+        <p class="research-area">Digital twins, hydraulic modeling, data assimilation</p>
+        <div class="links">
+          <a href="#">Scholar</a> &middot; <a href="#">CV</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── PhD Students ─────────────────────────────────── -->
+    <h2 class="people-section-title">PhD Students</h2>
+    <div class="people-grid">
+
+      <div class="person-card">
+        <div class="person-avatar av-3">AW</div>
+        <h4>Alice Wang</h4>
+        <div class="role">PhD Student, Year 4</div>
+        <p class="research-area">Sensor fusion, transfer learning for air quality, IoT networks</p>
+        <div class="links"><a href="#">Scholar</a></div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-4">BP</div>
+        <h4>Bob Patel</h4>
+        <div class="role">PhD Student, Year 3</div>
+        <p class="research-area">Electrochemical sensing, PFAS detection, field deployments</p>
+        <div class="links"><a href="#">Scholar</a></div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-5">CK</div>
+        <h4>Carol Kim</h4>
+        <div class="role">PhD Student, Year 3</div>
+        <p class="research-area">Anomaly detection, water quality, machine learning</p>
+        <div class="links"><a href="#">Scholar</a></div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-6">DT</div>
+        <h4>David Torres</h4>
+        <div class="role">PhD Student, Year 2</div>
+        <p class="research-area">EV charging optimization, stochastic control, power systems</p>
+        <div class="links"><a href="#">Scholar</a></div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-7">EL</div>
+        <h4>Emma Liu</h4>
+        <div class="role">PhD Student, Year 4</div>
+        <p class="research-area">Physics-informed ML, probabilistic forecasting, smart grid</p>
+        <div class="links"><a href="#">Scholar</a> &middot; <a href="#">Web</a></div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-8">FO</div>
+        <h4>Frank Okafor</h4>
+        <div class="role">PhD Student, Year 2</div>
+        <p class="research-area">Graph neural networks, power distribution networks</p>
+        <div class="links"><a href="#">Scholar</a></div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-1">GH</div>
+        <h4>Grace Huang</h4>
+        <div class="role">PhD Student, Year 3</div>
+        <p class="research-area">Digital twins, GNN surrogates, water distribution</p>
+        <div class="links"><a href="#">Scholar</a></div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-2">HP</div>
+        <h4>Henry Park</h4>
+        <div class="role">PhD Student, Year 1</div>
+        <p class="research-area">Voltage estimation, distribution networks, deep learning</p>
+        <div class="links"><a href="#">Scholar</a></div>
+      </div>
+
+    </div>
+
+    <!-- ── MS Students ──────────────────────────────────── -->
+    <h2 class="people-section-title">MS Students</h2>
+    <div class="people-grid">
+
+      <div class="person-card">
+        <div class="person-avatar av-3">IM</div>
+        <h4>Iris Martinez</h4>
+        <div class="role">MS Student</div>
+        <p class="research-area">Hydraulic modeling, pipe network optimization</p>
+        <div class="links"><a href="#">LinkedIn</a></div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-4">JC</div>
+        <h4>James Chen</h4>
+        <div class="role">MS Student</div>
+        <p class="research-area">Demand response, energy markets, optimization</p>
+        <div class="links"><a href="#">LinkedIn</a></div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-5">KW</div>
+        <h4>Kate Williams</h4>
+        <div class="role">MS Student</div>
+        <p class="research-area">Water quality sensor calibration, field sampling</p>
+        <div class="links"><a href="#">LinkedIn</a></div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-6">LR</div>
+        <h4>Liam Robinson</h4>
+        <div class="role">MS Student</div>
+        <p class="research-area">Predictive maintenance, pipe failure modeling</p>
+        <div class="links"><a href="#">LinkedIn</a></div>
+      </div>
+
+    </div>
+
+    <!-- ── Undergraduate Researchers ───────────────────── -->
+    <h2 class="people-section-title">Undergraduate Researchers</h2>
+    <div class="people-grid">
+
+      <div class="person-card">
+        <div class="person-avatar av-7">MS</div>
+        <h4>Maya Singh</h4>
+        <div class="role">Undergraduate Researcher</div>
+        <p class="research-area">Sensor deployment, data collection (Env. Sensing group)</p>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-8">NB</div>
+        <h4>Noah Brown</h4>
+        <div class="role">Undergraduate Researcher</div>
+        <p class="research-area">EV data analysis, web development (Energy Systems group)</p>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar av-1">OD</div>
+        <h4>Olivia Davis</h4>
+        <div class="role">Undergraduate Researcher</div>
+        <p class="research-area">GIS mapping, stormwater infrastructure (Smart Infra. group)</p>
+      </div>
+
+    </div>
+
+    <!-- ── Lab Manager / Staff ─────────────────────────── -->
+    <h2 class="people-section-title">Lab Staff</h2>
+    <div class="people-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">
+      <div class="person-card">
+        <div class="person-avatar av-5">RL</div>
+        <h4>Rachel Lee</h4>
+        <div class="role">Lab Manager &amp; Research Scientist</div>
+        <p class="research-area">Hardware development, field deployments, undergraduate mentoring</p>
+      </div>
+    </div>
+
+    <!-- ── Alumni ───────────────────────────────────────── -->
+    <h2 class="people-section-title">Alumni</h2>
+    <div class="people-grid alumni-grid">
+
+      <div class="person-card alumni-card">
+        <div class="person-avatar av-2">PZ</div>
+        <div class="info">
+          <h4>Dr. Peter Zhang</h4>
+          <span class="role">PhD, 2024</span>
+          <span class="placement">→ Research Scientist, Google DeepMind</span>
+        </div>
+      </div>
+
+      <div class="person-card alumni-card">
+        <div class="person-avatar av-3">QT</div>
+        <div class="info">
+          <h4>Dr. Quinn Taylor</h4>
+          <span class="role">PhD, 2023</span>
+          <span class="placement">→ Postdoc, MIT LIDS</span>
+        </div>
+      </div>
+
+      <div class="person-card alumni-card">
+        <div class="person-avatar av-4">RG</div>
+        <div class="info">
+          <h4>Dr. Rachel Green</h4>
+          <span class="role">PhD, 2023</span>
+          <span class="placement">→ Assistant Professor, Stanford CEE</span>
+        </div>
+      </div>
+
+      <div class="person-card alumni-card">
+        <div class="person-avatar av-6">SA</div>
+        <div class="info">
+          <h4>Sam Anderson</h4>
+          <span class="role">MS, 2024</span>
+          <span class="placement">→ Water Data Engineer, Xylem</span>
+        </div>
+      </div>
+
+      <div class="person-card alumni-card">
+        <div class="person-avatar av-7">TP</div>
+        <div class="info">
+          <h4>Tara Pham</h4>
+          <span class="role">MS, 2023</span>
+          <span class="placement">→ PhD Student, CMU CivE</span>
+        </div>
+      </div>
+
+      <div class="person-card alumni-card">
+        <div class="person-avatar av-8">VC</div>
+        <div class="info">
+          <h4>Victor Cruz</h4>
+          <span class="role">MS, 2022</span>
+          <span class="placement">→ Grid Analyst, National Grid</span>
+        </div>
+      </div>
+
+      <div class="person-card alumni-card">
+        <div class="person-avatar av-1">WN</div>
+        <div class="info">
+          <h4>Wendy Nguyen</h4>
+          <span class="role">Undergrad, 2024</span>
+          <span class="placement">→ PhD Student, UC Berkeley</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Join us CTA ─────────────────────────────────────── -->
+<section class="section-sm" style="background:var(--navy);color:var(--white);text-align:center">
+  <div class="container">
+    <h2 style="color:var(--white);margin-bottom:.75rem">Interested in Joining the Lab?</h2>
+    <p style="color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 1.75rem">We welcome motivated graduate students, postdocs, and undergrads. Reach out with your CV and a brief description of your research interests.</p>
+    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">WE3<span>Lab</span></div>
+        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>University • City, State</p>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Overview</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p style="font-size:.8rem">&copy; 2026 WE3 Lab. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — WE3 Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav class="nav">
+  <div class="container">
+    <a class="nav-logo" href="index.html">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="13" stroke="#3a9aaa" stroke-width="2"/>
+        <path d="M7 10l3.5 8L14 12l3.5 6L21 10" stroke="#3a9aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      WE3<span>Lab</span>
+    </a>
+    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── Page Header ─────────────────────────────────────── -->
+<div class="page-header">
+  <div class="container">
+    <h1>How to Reach Us</h1>
+    <p>We welcome inquiries from prospective students, collaborators, journalists, and community partners.</p>
+  </div>
+</div>
+
+<!-- ── Main contact section ────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Info -->
+      <div>
+        <h3>Get in Touch</h3>
+        <p style="margin-bottom:2rem">Use the form to reach out or find us directly at the contact details below. We typically respond within 2–3 business days.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Office</h4>
+            <p>Room XXX, Engineering Hall<br>
+               University · City, State ZIP</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:we3lab@university.edu">we3lab@university.edu</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🐦</div>
+          <div>
+            <h4>Twitter / X</h4>
+            <p><a href="#">@WE3Lab</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">💻</div>
+          <div>
+            <h4>GitHub</h4>
+            <p><a href="#">github.com/we3lab</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📄</div>
+          <div>
+            <h4>Google Scholar</h4>
+            <p><a href="#">WE3 Lab publications</a></p>
+          </div>
+        </div>
+
+        <!-- Prospective students box -->
+        <div style="margin-top:2rem;padding:1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-left:4px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0">
+          <h4 style="color:var(--navy);margin-bottom:.4rem">Prospective Graduate Students</h4>
+          <p style="font-size:.875rem">If you are interested in joining as a PhD student, please apply through the department's official admissions portal and mention WE3 Lab in your statement. You may also email the PI directly with your CV and research interests — we read every inquiry.</p>
+        </div>
+
+        <!-- Visiting / undergrad box -->
+        <div style="margin-top:1rem;padding:1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0">
+          <h4 style="color:var(--navy);margin-bottom:.4rem">Undergraduate &amp; Visiting Researchers</h4>
+          <p style="font-size:.875rem">We regularly host undergraduates for independent study and REU projects. Visiting researchers and international students are also welcome — please reach out with a CV and a one-paragraph statement of interest.</p>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div>
+        <div class="card card-body" style="padding:2rem">
+          <h3 style="color:var(--navy);margin-bottom:1.5rem">Send a Message</h3>
+          <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name <span style="color:var(--teal)">*</span></label>
+                <input type="text" id="first-name" name="first_name" required placeholder="Jane" />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name <span style="color:var(--teal)">*</span></label>
+                <input type="text" id="last-name" name="last_name" required placeholder="Smith" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span style="color:var(--teal)">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="jane@university.edu" />
+            </div>
+            <div class="form-group">
+              <label for="affiliation">Affiliation / Institution</label>
+              <input type="text" id="affiliation" name="affiliation" placeholder="University of Example" />
+            </div>
+            <div class="form-group">
+              <label for="inquiry-type">Inquiry Type <span style="color:var(--teal)">*</span></label>
+              <select id="inquiry-type" name="inquiry_type" required>
+                <option value="" disabled selected>Select one…</option>
+                <option value="prospective-phd">Prospective PhD Student</option>
+                <option value="prospective-ms">Prospective MS Student</option>
+                <option value="prospective-undergrad">Undergraduate Research</option>
+                <option value="postdoc">Postdoctoral Opportunity</option>
+                <option value="collaboration">Research Collaboration</option>
+                <option value="media">Media / Press</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span style="color:var(--teal)">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us about your background and what you'd like to discuss…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-teal" style="width:100%;justify-content:center">Send Message &rarr;</button>
+            <p style="font-size:.78rem;color:var(--gray-500);margin-top:.75rem;text-align:center">
+              We typically respond within 2–3 business days. By submitting this form you agree to be contacted by the WE3 Lab team.
+            </p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Map / Location placeholder ─────────────────────── -->
+<section class="section-sm" style="background:var(--gray-50);border-top:1px solid var(--gray-200)">
+  <div class="container text-center">
+    <h2 class="text-navy" style="margin-bottom:.5rem">Find Us</h2>
+    <p style="color:var(--gray-500);margin-bottom:2rem">We are located in the Engineering complex on the main campus.</p>
+    <!-- Embed a real Google Maps iframe here: replace the src with your actual embed URL -->
+    <div style="width:100%;height:300px;background:var(--gray-200);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:.9rem;border:1px solid var(--gray-200)">
+      [Replace with Google Maps embed — Settings &rsaquo; Share &rsaquo; Embed a map]
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">WE3<span>Lab</span></div>
+        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>University • City, State</p>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Overview</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p style="font-size:.8rem">&copy; 2026 WE3 Lab. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

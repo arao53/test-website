@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy Flexibility — WE3 Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav class="nav">
+  <div class="container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="13" stroke="#3a9aaa" stroke-width="2"/>
+        <path d="M7 10l3.5 8L14 12l3.5 6L21 10" stroke="#3a9aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      WE3<span>Lab</span>
+    </a>
+    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Overview</a></li>
+      <li><a href="../research.html">Research</a></li>
+      <li><a href="../people.html">People</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── Page Header ─────────────────────────────────────── -->
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="../research.html">Research</a> &rsaquo; Energy Flexibility</div>
+    <h1>⚡ Energy Flexibility</h1>
+    <p>Optimization and control frameworks for demand-side flexibility, renewable integration, and distributed energy resource coordination.</p>
+  </div>
+</div>
+
+<!-- ── Content ────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div style="max-width:760px">
+      <h2 class="text-navy">Research Overview</h2>
+      <div class="divider" style="margin:1rem 0"></div>
+      <p>The Energy Flexibility group develops the algorithms, models, and market mechanisms needed to make electricity demand an active participant in grid balancing. As grids incorporate more variable renewable energy, the ability to shift, shed, or reshape loads in real time becomes increasingly valuable — and increasingly necessary for reliability and cost-efficiency.</p>
+      <p>Our work spans three scales: individual assets (EV chargers, HVAC, water heaters, industrial equipment), aggregations of assets managed by utilities or aggregators, and grid-level market clearing and dispatch. Methodologically we draw on stochastic and robust optimization, model predictive control, reinforcement learning, and mechanism design.</p>
+    </div>
+
+    <!-- Active Projects -->
+    <h2 class="text-navy" style="margin-top:3rem;margin-bottom:1.5rem">Active Projects</h2>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="tags"><span class="tag">DOE</span><span class="tag">2025–2028</span></div>
+        <h4>Distributed EV Charging Optimization</h4>
+        <p>Optimal scheduling of EV charging at the distribution level, balancing grid congestion, user preferences, and renewable availability using online convex programming.</p>
+      </div>
+
+      <div class="project-card">
+        <div class="tags"><span class="tag">ARPA-E</span><span class="tag">2024–2026</span></div>
+        <h4>Distributed Energy Resource Coordination</h4>
+        <p>Hierarchical control for aggregating rooftop solar, battery storage, and flexible loads to provide ancillary services to the bulk power system.</p>
+      </div>
+
+      <div class="project-card">
+        <div class="tags"><span class="tag">NSF CBET</span><span class="tag">2024–2027</span></div>
+        <h4>Physics-Informed Probabilistic Load Forecasting</h4>
+        <p>Hybrid neural network architectures that embed power-flow constraints to improve short-term load forecasts under weather and behavioral uncertainty.</p>
+      </div>
+
+      <div class="project-card">
+        <div class="tags"><span class="tag">Industry</span><span class="tag">2025–2026</span></div>
+        <h4>Transactive Energy for Commercial Buildings</h4>
+        <p>Market mechanisms that incentivize demand response in large commercial buildings while preserving occupant comfort and equipment lifetime.</p>
+      </div>
+
+    </div>
+
+    <!-- Publications -->
+    <h2 class="text-navy" style="margin-top:3rem;margin-bottom:1.5rem">Selected Publications</h2>
+    <ul class="publication-list">
+      <li>
+        <strong>Distribution-Robust Load Forecasting with Physics-Informed Neural Networks</strong>
+        Liu, E., Okafor, F., &amp; [PI Name]. <em>IEEE Transactions on Smart Grid</em>, 2025.
+        <span>doi:10.1109/TSG.2025.XXXXXXX</span>
+      </li>
+      <li>
+        <strong>Graph Neural Network Approaches for Voltage Estimation in Distribution Networks</strong>
+        Park, H., Wang, A., &amp; [PI Name]. <em>Applied Energy</em>, 2025.
+        <span>doi:10.1016/j.apenergy.2025.XXXXXX</span>
+      </li>
+      <li>
+        <strong>Online Optimal EV Charging with Grid Congestion Constraints</strong>
+        Torres, D., Kim, C., &amp; [PI Name]. <em>IEEE POWERTECH</em>, 2024.
+        <span>Conference proceeding</span>
+      </li>
+      <li>
+        <strong>Uncertainty Quantification for Renewable Generation Forecasts via Conformal Prediction</strong>
+        Liu, E. &amp; [PI Name]. <em>Energy and AI</em>, 2024.
+        <span>doi:10.1016/j.egyai.2024.XXXXXX</span>
+      </li>
+    </ul>
+
+    <!-- Team -->
+    <h2 class="text-navy" style="margin-top:3rem;margin-bottom:1.5rem">Group Members</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem">
+      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--navy)">Emma Liu</strong> <span style="color:var(--teal)">· PhD Student</span>
+      </div>
+      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--navy)">Frank Okafor</strong> <span style="color:var(--teal)">· PhD Student</span>
+      </div>
+      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--navy)">Henry Park</strong> <span style="color:var(--teal)">· PhD Student</span>
+      </div>
+      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--navy)">David Torres</strong> <span style="color:var(--teal)">· PhD Student</span>
+      </div>
+      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--navy)">James Chen</strong> <span style="color:var(--teal)">· MS Student</span>
+      </div>
+      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--navy)">Noah Brown</strong> <span style="color:var(--teal)">· Undergraduate Researcher</span>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <a href="../research.html" class="btn btn-navy">&larr; Back to Research</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">WE3<span>Lab</span></div>
+        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>University • City, State</p>
+      </div>
+      <nav class="footer-links">
+        <a href="../index.html">Overview</a>
+        <a href="../research.html">Research</a>
+        <a href="../people.html">People</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <p style="font-size:.8rem">&copy; 2026 WE3 Lab. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
