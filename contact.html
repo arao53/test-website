@@ -15,11 +15,7 @@
 <nav class="nav">
   <div class="container">
     <a class="nav-logo" href="index.html">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="14" cy="14" r="13" stroke="#3a9aaa" stroke-width="2"/>
-        <path d="M7 10l3.5 8L14 12l3.5 6L21 10" stroke="#3a9aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      WE3<span>Lab</span>
+      <img src="assets/logos/stanfordlogo.png" alt="Stanford logo" height="64">
     </a>
     <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -34,14 +30,6 @@
   </div>
 </nav>
 
-<!-- ── Page Header ─────────────────────────────────────── -->
-<div class="page-header">
-  <div class="container">
-    <h1>How to Reach Us</h1>
-    <p>We welcome inquiries from prospective students, collaborators, journalists, and community partners.</p>
-  </div>
-</div>
-
 <!-- ── Main contact section ────────────────────────────── -->
 <section class="section">
   <div class="container">
@@ -50,47 +38,13 @@
       <!-- Left: Info -->
       <div>
         <h3>Get in Touch</h3>
-        <p style="margin-bottom:2rem">Use the form to reach out or find us directly at the contact details below. We typically respond within 2–3 business days.</p>
+        <p style="margin-bottom:2rem">Use the form to reach out or find us directly at the contact details below.</p>
 
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div>
-            <h4>Office</h4>
-            <p>Room XXX, Engineering Hall<br>
-               University · City, State ZIP</p>
-          </div>
-        </div>
 
-        <div class="contact-item">
-          <div class="contact-icon">✉️</div>
-          <div>
-            <h4>Email</h4>
-            <p><a href="mailto:we3lab@university.edu">we3lab@university.edu</a></p>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">🐦</div>
-          <div>
-            <h4>Twitter / X</h4>
-            <p><a href="#">@WE3Lab</a></p>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">💻</div>
-          <div>
-            <h4>GitHub</h4>
-            <p><a href="#">github.com/we3lab</a></p>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">📄</div>
-          <div>
-            <h4>Google Scholar</h4>
-            <p><a href="#">WE3 Lab publications</a></p>
-          </div>
+        <!-- Prospective students box -->
+        <div style="margin-top:2rem;padding:1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-left:4px solid var(--maroon);border-radius:0 var(--radius) var(--radius) 0">
+          <h4 style="color:var(--navy);margin-bottom:.4rem">Prospective Post-docs</h4>
+          <p style="font-size:.875rem">If you are interested in joining as a Post-doc, please apply through the department's official admissions portal and mention WE3 Lab in your statement. You may also email the PI directly with your CV and research interests — we read every inquiry.</p>
         </div>
 
         <!-- Prospective students box -->
@@ -100,7 +54,7 @@
         </div>
 
         <!-- Visiting / undergrad box -->
-        <div style="margin-top:1rem;padding:1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0">
+        <div style="margin-top:2rem;padding:1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0">
           <h4 style="color:var(--navy);margin-bottom:.4rem">Undergraduate &amp; Visiting Researchers</h4>
           <p style="font-size:.875rem">We regularly host undergraduates for independent study and REU projects. Visiting researchers and international students are also welcome — please reach out with a CV and a one-paragraph statement of interest.</p>
         </div>
@@ -144,11 +98,11 @@
             </div>
             <div class="form-group">
               <label for="message">Message <span style="color:var(--teal)">*</span></label>
-              <textarea id="message" name="message" rows="5" required placeholder="Tell us about your background and what you'd like to discuss…"></textarea>
+              <textarea id="message" name="message" rows="5" required placeholder="What would you like to discuss?"></textarea>
             </div>
             <button type="submit" class="btn btn-teal" style="width:100%;justify-content:center">Send Message &rarr;</button>
             <p style="font-size:.78rem;color:var(--gray-500);margin-top:.75rem;text-align:center">
-              We typically respond within 2–3 business days. By submitting this form you agree to be contacted by the WE3 Lab team.
+              Suspected AI-generated outreach requests will be automatically flagged and de-prioritized.
             </p>
           </form>
         </div>
@@ -163,10 +117,13 @@
   <div class="container text-center">
     <h2 class="text-navy" style="margin-bottom:.5rem">Find Us</h2>
     <p style="color:var(--gray-500);margin-bottom:2rem">We are located in the Engineering complex on the main campus.</p>
-    <!-- Embed a real Google Maps iframe here: replace the src with your actual embed URL -->
-    <div style="width:100%;height:300px;background:var(--gray-200);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:.9rem;border:1px solid var(--gray-200)">
-      [Replace with Google Maps embed — Settings &rsaquo; Share &rsaquo; Embed a map]
-    </div>
+    <iframe
+      src="https://maps.google.com/maps?q=473+Via+Ortega,Stanford,CA+94305&hl=en&z=16&output=embed"
+      width="100%" height="300"
+      style="border:0;border-radius:var(--radius-lg)"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </div>
 </section>
 
@@ -175,8 +132,7 @@
   <div class="container">
     <div class="footer-inner">
       <div>
-        <div class="footer-logo">WE3<span>Lab</span></div>
-        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>University • City, State</p>
+        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>Stanford, CA</p>
       </div>
       <nav class="footer-links">
         <a href="index.html">Overview</a>
@@ -190,6 +146,5 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
 </body>
 </html>

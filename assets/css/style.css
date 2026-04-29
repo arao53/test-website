@@ -5,6 +5,8 @@
   --teal:       #2d7d8a;
   --teal-light: #3a9aaa;
   --gold:       #c8961e;
+  --maroon:     #8b1a1a;
+  --maroon-light: #a83232;
   --gray-50:    #f8f9fa;
   --gray-100:   #f0f2f5;
   --gray-200:   #e2e6ea;
@@ -63,7 +65,7 @@ p:last-child { margin-bottom: 0; }
 /* ─── Navigation ────────────────────────────────────────── */
 .nav {
   position: sticky; top: 0; z-index: 100;
-  background: var(--navy);
+  background: #231F20;
   height: var(--nav-h);
   display: flex; align-items: center;
   box-shadow: 0 2px 8px rgba(0,0,0,.25);
@@ -102,41 +104,37 @@ p:last-child { margin-bottom: 0; }
   transition: all .25s;
 }
 #nav-toggle { display: none; }
-#nav-toggle:checked ~ .nav .nav-links { display: flex; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: var(--navy-dark); padding: 1rem; gap: .25rem; }
+#nav-toggle:checked ~ .nav .nav-links { display: flex; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: #3f4245; padding: 1rem; gap: .25rem; }
 
 @media (max-width: 720px) {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
-  .nav-links.open { display: flex; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: var(--navy-dark); padding: 1.25rem 1.5rem; gap: .25rem; box-shadow: var(--shadow-md); }
+  .nav-links.open { display: flex; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: #3f4245; padding: 1.25rem 1.5rem; gap: .25rem; box-shadow: var(--shadow-md); }
 }
 
 /* ─── Hero ──────────────────────────────────────────────── */
 .hero {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #1d4460 100%);
-  color: var(--white);
+  background: linear-gradient(rgba(255,255,255,0.62), rgba(255,255,255,0.62)),
+              url('../logos/sb_landscape.jpeg') center/cover no-repeat;
+  color: var(--navy);
   padding: 7rem 0 5rem;
   position: relative; overflow: hidden;
 }
-.hero::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-  pointer-events: none;
-}
+.hero::after { display: none; }
 .hero-content { position: relative; max-width: 700px; }
 .hero-badge {
   display: inline-block;
-  background: rgba(45,125,138,.35);
-  color: var(--teal-light);
+  background: rgba(45,125,138,.15);
+  color: var(--teal);
   font-size: .8rem; font-weight: 600;
   letter-spacing: .08em; text-transform: uppercase;
   padding: .35rem .85rem; border-radius: 100px;
-  border: 1px solid rgba(45,125,138,.5);
+  border: 1px solid rgba(45,125,138,.4);
   margin-bottom: 1.25rem;
 }
 .hero h1 { margin-bottom: 1.25rem; }
-.hero h1 em { color: var(--teal-light); font-style: normal; }
-.hero p { color: rgba(255,255,255,.75); font-size: 1.1rem; max-width: 560px; }
+.hero h1 em { color: var(--teal); font-style: normal; }
+.hero p { color: rgba(20,40,70,.75); font-size: 1.1rem; max-width: 560px; }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
 .btn {
   display: inline-flex; align-items: center; gap: .5rem;
@@ -146,12 +144,16 @@ p:last-child { margin-bottom: 0; }
 }
 .btn-primary   { background: var(--teal);  color: var(--white); }
 .btn-primary:hover  { background: var(--teal-light); color: var(--white); }
-.btn-outline   { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.4); }
-.btn-outline:hover  { background: rgba(255,255,255,.1); color: var(--white); border-color: rgba(255,255,255,.7); }
+.btn-outline   { background: transparent; color: var(--navy); border: 1.5px solid rgba(10,36,68,.35); }
+.btn-outline:hover  { background: rgba(10,36,68,.07); color: var(--navy); border-color: rgba(10,36,68,.6); }
 .btn-teal      { background: var(--teal); color: var(--white); }
 .btn-teal:hover     { background: var(--teal-light); color: var(--white); }
 .btn-navy      { background: var(--navy); color: var(--white); }
 .btn-navy:hover     { background: var(--navy-dark); color: var(--white); }
+.btn-black     { background: #2B2B2C; color: #fff; }
+.btn-black:hover    { background: #444445; color: #fff; }
+.btn-maroon    { background: var(--maroon); color: var(--white); }
+.btn-maroon:hover   { background: var(--maroon-light); color: var(--white); }
 
 /* ─── Cards ─────────────────────────────────────────────── */
 .card {
@@ -247,7 +249,8 @@ p:last-child { margin-bottom: 0; }
   text-align: center;
   transition: transform .2s, box-shadow .2s;
 }
-.person-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.person-card:hover { cursor: default; }
+.pi-card, .pi-card:hover { transform: none; box-shadow: var(--shadow-sm); cursor: default; }
 .person-avatar {
   width: 100px; height: 100px;
   border-radius: 50%; overflow: hidden;
@@ -265,6 +268,19 @@ p:last-child { margin-bottom: 0; }
 .person-card .links { display: flex; justify-content: center; gap: .5rem; margin-top: .75rem; }
 .person-card .links a { color: var(--gray-500); font-size: .8rem; }
 .person-card .links a:hover { color: var(--teal); }
+.group-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem; margin-top: .4rem; }
+.group-tag {
+  display: inline-block;
+  padding: .2rem .55rem;
+  border-radius: 20px;
+  font-size: .72rem; font-weight: 500;
+  background: rgba(45,125,138,.1);
+  color: var(--teal);
+  border: 1px solid rgba(45,125,138,.25);
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+.group-tag:hover { background: rgba(45,125,138,.2); border-color: var(--teal); color: var(--teal); }
 
 /* Alumni grid is slightly more compact */
 .alumni-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
@@ -332,7 +348,7 @@ p:last-child { margin-bottom: 0; }
 
 /* ─── Footer ─────────────────────────────────────────────── */
 footer {
-  background: var(--navy-dark);
+  background: #2B2B2C;
   color: rgba(255,255,255,.6);
   padding: 2.5rem 0;
   font-size: .875rem;

@@ -6,10 +6,22 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
-MEMBERS_JSON = ROOT / "scripts" / "members.json"
+MEMBERS_JSON = ROOT / "members" / "members.json"
 PEOPLE_HTML  = ROOT / "people.html"
 
 ROLE_ORDER = ["PI", "postdoc", "phd student", "ms student", "undergrad", "staff", "alumni"]
+GROUP_URLS = {
+    "energy flexibility":   "research/energyflexibility.html",
+    "water and wastewater": "research/waterandwastewater.html",
+    "systems planning":     "research/systemsplanning.html",
+    "water technology":     "research/watertechnology.html",
+}
+GROUP_LABELS = {
+    "energy flexibility":   "Energy Flexibility",
+    "water and wastewater": "Water and Wastewater",
+    "systems planning":     "Systems Planning",
+    "water technology":     "Water Technology",
+}
 SECTION_LABEL = {
     "PI":          "Principal Investigator",
     "postdoc":     "Postdoctoral Researchers",
@@ -45,7 +57,7 @@ def build_links(m):
         if m.get("scholar_id") else ""
     )
     if scholar_url:
-        parts.append(f'<a href="{scholar_url}" target="_blank" rel="noopener">Scholar</a>')
+        parts.append(f'<a href="{scholar_url}" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>')
     if m.get("linkedin"):
         parts.append(f'<a href="{m["linkedin"]}" target="_blank" rel="noopener">LinkedIn</a>')
     if m.get("website"):
@@ -91,25 +103,35 @@ def card_alumni(m, av):
 def card_member(m, av):
     role_text = m.get("role_label") or ROLE_DISPLAY.get(m["role"], m["role"])
     groups = m.get("groups") or []
-    area   = m.get("research_area") or (
-        ", ".join(g.capitalize() for g in groups) if groups else ""
-    )
     links = build_links(m)
     html  = f'      <div class="person-card">\n'
     html += f'        <div class="person-avatar {av}">{initials(m["name"])}</div>\n'
     html += f'        <h4>{m["name"]}</h4>\n'
     html += f'        <div class="role">{role_text}</div>\n'
-    if area:
-        html += f'        <p class="research-area">{area}</p>\n'
+    if groups:
+        tags = "".join(
+            f'<a href="{GROUP_URLS.get(g.lower(), "#")}" class="group-tag">{GROUP_LABELS.get(g.lower(), g.title())}</a>'
+            for g in groups
+        )
+        html += f'        <div class="group-tags">{tags}</div>\n'
+    elif m.get("research_area"):
+        html += f'        <p class="research-area">{m["research_area"]}</p>\n'
     if links:
         html += f'        <div class="links">{links}</div>\n'
     html += "      </div>"
     return html
 
 
+def last_name(m):
+    clean = re.sub(r"^Dr\.\s+", "", m["name"], flags=re.IGNORECASE).strip()
+    return clean.split()[-1].lower()
+
+
 def render_section(role, members, av_idx):
     if not members:
         return "", av_idx
+    if role != "PI":
+        members = sorted(members, key=last_name)
     label    = SECTION_LABEL.get(role, role)
     is_pi    = role == "PI"
     is_alumni = role == "alumni"

@@ -12,8 +12,8 @@ ROOT = Path(__file__).parent.parent
 
 GROUP_TO_FILE = {
     "energy flexibility":  ROOT / "research" / "energyflexibility.html",
-    "water and wastewater": ROOT / "research" / "waterandwastewater.html",
-    "systems planning":    ROOT / "research" / "systemsplanning.html",
+    "infrastructure planning": ROOT / "research" / "infrastructureplanning.html",
+    "separations":    ROOT / "research" / "separations.html",
     "water technology":    ROOT / "research" / "watertechnology.html",
 }
 

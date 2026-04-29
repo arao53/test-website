@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
 
@@ -15,11 +16,7 @@
 <nav class="nav">
   <div class="container">
     <a class="nav-logo" href="index.html">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="14" cy="14" r="13" stroke="#3a9aaa" stroke-width="2"/>
-        <path d="M7 10l3.5 8L14 12l3.5 6L21 10" stroke="#3a9aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      WE3<span>Lab</span>
+      <img src="assets/logos/stanfordlogo.png" alt="Stanford logo" height="64">
     </a>
     <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -35,97 +32,118 @@
 </nav>
 
 <!-- ── Page Header ─────────────────────────────────────── -->
-<div class="page-header">
-  <div class="container">
-    <h1>People</h1>
-    <p>Meet the researchers who make WE3 Lab possible — a diverse team united by curiosity, rigor, and a commitment to impact.</p>
-  </div>
-</div>
-
 <section class="section">
   <div class="container">
-    <!-- BEGIN:people-generated -->
     <h2 class="people-section-title">Principal Investigator</h2>
-    <div class="people-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">
-      <div class="person-card" style="display:flex;gap:1.5rem;text-align:left;padding:1.75rem;align-items:flex-start">
-        <div class="person-avatar av-1" style="width:90px;height:90px;font-size:1.5rem;flex-shrink:0">MM</div>
-        <div>
-          <h4>Meagan S. Mauter</h4>
-          <div class="role">Principal Investigator</div>
-          <div class="links" style="justify-content:flex-start;margin-top:.75rem"><a href="https://scholar.google.com/citations?user=04f-_PIAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Scholar</a></div>
+    <!-- Meagan Mauter -->
+    <div style="display:flex;gap:2rem;align-items:flex-start;margin-bottom:2.5rem">
+      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:385px">
+        <img src="members/images/meaganmauter.png" alt="Meagan S. Mauter" style="width:385px;height:385px;border-radius:20%;object-fit:cover">
+        <div style="margin-top:1rem;width:100%">
+          <p style="font-size:.8rem;font-weight:600;color:var(--blk);margin-bottom:.35rem">Education</p>
+          <ul style="font-size:.8rem;color:#444;line-height:1.7;margin:0;padding-left:1.1rem">
+            <li>PhD, Yale University, Chemical and Environmental Engineering (2011)</li>
+            <li>MS and M.Phil., Yale University, Chemical and Environmental Engineering (2007)</li>
+            <li>MEE, Rice University, Environmental Engineering (2006)</li>
+            <li>BS, Rice University, Civil &amp; Environmental Engineering (2006)</li>
+            <li>BA, Rice University, History (2006)</li>
+          </ul>
         </div>
       </div>
+      <div>
+        <h4 style="font-size:1.15rem;color:var(--blk);margin-bottom:.25rem">Meagan S. Mauter</h4>
+        <div style="display:flex;gap:.6rem;align-items:center;margin-top:.35rem">
+          <a href="https://scholar.google.com/citations?user=04f-_PIAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" title="Google Scholar" style="display:inline-flex;align-items:center;opacity:.75;transition:opacity .2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.75">
+            <i class="fa-brands fa-google-scholar" style="font-size:22px" aria-label="Google Scholar"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="LinkedIn" style="display:inline-flex;align-items:center;opacity:.75;transition:opacity .2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.75">
+            <i class="fa-brands fa-linkedin" style="font-size:22px" aria-label="LinkedIn"></i>
+          </a>
+        </div>
+        <p style="font-size:.85rem;color:#555;margin-top:.4rem;margin-bottom:.75rem">Associate Professor, Civil &amp; Environmental Engineering &amp; Photon Science; Senior Fellow, Woods Institute for the Environment &amp; Precourt Institute for Energy; Associate Professor (by courtesy), Chemical Engineering</p>
+        <p style="font-size:.9rem;color:var(--blk);line-height:1.6;margin-bottom:.75rem">Professor Meagan Mauter directs the Water and Energy Efficiency for the Environment Lab (WE3Lab) with the mission of providing sustainable water supply in a carbon-constrained world through innovation in water treatment technology, optimization of water management practices, and redesign of water policies. Ongoing research efforts include: (1) developing automated, precise, robust, intensified, modular, and electrified (A-PRIME) water desalination technologies to support a circular water economy; (2) identifying synergies and addressing barriers to coordinated operation of decarbonized water and energy systems; and (3) supporting the design and enforcement of water-energy policies.</p>
+        <p style="font-size:.9rem;color:var(--blk);line-height:1.6;margin-bottom:.75rem">Professor Mauter also serves as the research director for the National Alliance for Water Innovation, a $110-million DOE Energy-Water Desalination Hub addressing water security issues in the United States. The Hub targets early-stage research and development of energy-efficient and cost-competitive technologies for desalinating non-traditional source waters.</p>
+        <p style="font-size:.9rem;color:var(--blk);line-height:1.6;margin-bottom:.75rem">Prior to joining the faculty at Stanford, she served as an Energy Technology Innovation Policy Fellow at the Belfer Center for Science and International Affairs and the Mossavar Rahmani Center for Business and Government at the Harvard Kennedy School, and as an Associate Professor of Engineering &amp; Public Policy, Civil &amp; Environmental Engineering, and Chemical Engineering at Carnegie Mellon University.</p>
+      </div>
     </div>
+    <!-- BEGIN:people-generated -->
     <h2 class="people-section-title">Postdoctoral Researchers</h2>
     <div class="people-grid">
-      <div class="person-card" id="erin-musabandesu">
-        <div class="person-avatar av-2">EM</div>
+      <div class="person-card">
+        <div class="person-avatar av-1">EM</div>
         <h4>Dr. Erin Musabandesu</h4>
         <div class="role">Postdoctoral Researcher</div>
-        <p class="research-area">Energy flexibility, Water and wastewater</p>
+        <div class="group-tags"><a href="research/energyflexibility.html" class="group-tag">Energy Flexibility</a><a href="#" class="group-tag">Infrastructure Planning</a></div>
+        <div class="links"><a href="https://scholar.google.com/citations?user=fEKOsmoAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a> &middot; <a href="https://www.linkedin.com/in/erin-musabandesu-pe-48154a10a" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
-      <div class="person-card" id="haochi-wu">
+      <div class="person-card">
+        <div class="person-avatar av-2">NS</div>
+        <h4>Dr. Nitish Sarker</h4>
+        <div class="role">Postdoctoral Researcher</div>
+        <div class="group-tags"><a href="#" class="group-tag">Separations</a><a href="#" class="group-tag">Infrastructure Planning</a></div>
+        <div class="links"><a href="https://scholar.google.com/citations?user=aqHdI_0AAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a> &middot; <a href="https://www.linkedin.com/in/nitish-ranjan-sarker/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+      <div class="person-card">
         <div class="person-avatar av-3">HW</div>
         <h4>Dr. Haochi Wu</h4>
         <div class="role">Postdoctoral Researcher</div>
-        <p class="research-area">Energy flexibility</p>
-      </div>
-      <div class="person-card" id="nitish-sarkar">
-        <div class="person-avatar av-4">NS</div>
-        <h4>Dr. Nitish Sarkar</h4>
-        <div class="role">Postdoctoral Researcher</div>
-        <p class="research-area">Water and wastewater</p>
+        <div class="group-tags"><a href="research/energyflexibility.html" class="group-tag">Energy Flexibility</a></div>
+        <div class="links"><a href="https://scholar.google.com/citations?user=512_0RoAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a> &middot; <a href="https://www.linkedin.com/in/haochi-wu-58b0b3202/" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
     </div>
     <h2 class="people-section-title">PhD Students</h2>
     <div class="people-grid">
-      <div class="person-card" id="akshay-rao">
-        <div class="person-avatar av-5">AR</div>
-        <h4>Akshay Rao</h4>
-        <div class="role">PhD Student</div>
-        <p class="research-area">Energy flexibility</p>
-      </div>
       <div class="person-card">
-        <div class="person-avatar av-6">CA</div>
+        <div class="person-avatar av-4">CA</div>
         <h4>Caroline Adkins</h4>
         <div class="role">PhD Student</div>
-        <p class="research-area">Energy flexibility</p>
+        <div class="group-tags"><a href="#" class="group-tag">Infrastructure Planning</a><a href="#" class="group-tag">Separations</a></div>
+        <div class="links"><a href="https://scholar.google.com/citations?user=vUu8KmIAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a> &middot; <a href="https://www.linkedin.com/in/caroline-adkins-154ab4197/" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
       <div class="person-card">
-        <div class="person-avatar av-7">FC</div>
+        <div class="person-avatar av-5">FC</div>
         <h4>Fletcher Chapin</h4>
         <div class="role">PhD Student</div>
-        <p class="research-area">Energy flexibility</p>
+        <div class="group-tags"><a href="research/energyflexibility.html" class="group-tag">Energy Flexibility</a><a href="#" class="group-tag">Infrastructure Planning</a></div>
+        <div class="links"><a href="https://scholar.google.com/citations?user=zZIdty8AAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a> &middot; <a href="https://www.linkedin.com/in/fletcher-chapin-838171a0" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
       <div class="person-card">
-        <div class="person-avatar av-8">CT</div>
-        <h4>Carson Tucker</h4>
+        <div class="person-avatar av-6">SF</div>
+        <h4>Sinan Abi Farraj</h4>
         <div class="role">PhD Student</div>
-        <p class="research-area">Energy flexibility</p>
+        <div class="group-tags"><a href="#" class="group-tag">Infrastructure Planning</a></div>
+        <div class="links"><a href="https://scholar.google.com/citations?user=jXY4gz0AAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a> &middot; <a href="https://www.linkedin.com/in/sinan-abi-farraj-832960148/" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
       <div class="person-card">
-        <div class="person-avatar av-1">DW</div>
-        <h4>Daly Wettermark</h4>
-        <div class="role">PhD Student</div>
-        <p class="research-area">Energy flexibility</p>
-      </div>
-      <div class="person-card">
-        <div class="person-avatar av-2">GK</div>
+        <div class="person-avatar av-7">GK</div>
         <h4>Gina Kittleson</h4>
         <div class="role">PhD Student</div>
-        <p class="research-area">Energy flexibility</p>
+        <div class="group-tags"><a href="#" class="group-tag">Infrastructure Planning</a></div>
+        <div class="links"><a href="https://www.linkedin.com/in/gina-kittleson-a694a3207/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+      <div class="person-card">
+        <div class="person-avatar av-8">AR</div>
+        <h4>Akshay Rao</h4>
+        <div class="role">PhD Student</div>
+        <div class="group-tags"><a href="research/energyflexibility.html" class="group-tag">Energy Flexibility</a><a href="#" class="group-tag">Infrastructure Planning</a><a href="#" class="group-tag">Separations</a></div>
+        <div class="links"><a href="https://scholar.google.com/citations?user=4jkAz8kAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a> &middot; <a href="https://www.linkedin.com/in/akshayrao53/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+      <div class="person-card">
+        <div class="person-avatar av-1">CT</div>
+        <h4>Carson Tucker</h4>
+        <div class="role">PhD Student</div>
+        <div class="group-tags"><a href="research/energyflexibility.html" class="group-tag">Energy Flexibility</a><a href="#" class="group-tag">Infrastructure Planning</a><a href="#" class="group-tag">Separations</a></div>
+        <div class="links"><a href="https://scholar.google.com/citations?user=UbafTjMAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a> &middot; <a href="https://www.linkedin.com/in/carson-tucker-43b4a4145/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+      <div class="person-card">
+        <div class="person-avatar av-2">DW</div>
+        <h4>Daly Wettermark</h4>
+        <div class="role">PhD Student</div>
+        <div class="group-tags"><a href="research/energyflexibility.html" class="group-tag">Energy Flexibility</a><a href="#" class="group-tag">Infrastructure Planning</a></div>
+        <div class="links"><a href="https://www.linkedin.com/in/daly-wettermark" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
     </div>
     <!-- END:people-generated -->
-  </div>
-</section>
-
-<!-- ── Join us CTA ─────────────────────────────────────── -->
-<section class="section-sm" style="background:var(--navy);color:var(--white);text-align:center">
-  <div class="container">
-    <h2 style="color:var(--white);margin-bottom:.75rem">Interested in Joining the Lab?</h2>
-    <p style="color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 1.75rem">We welcome motivated graduate students, postdocs, and undergrads. Reach out with your CV and a brief description of your research interests.</p>
-    <a href="contact.html" class="btn btn-primary">Contact Us</a>
   </div>
 </section>
 
@@ -134,8 +152,7 @@
   <div class="container">
     <div class="footer-inner">
       <div>
-        <div class="footer-logo">WE3<span>Lab</span></div>
-        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>University • City, State</p>
+        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>Stanford, CA</p>
       </div>
       <nav class="footer-links">
         <a href="index.html">Overview</a>
@@ -149,6 +166,5 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
 </body>
 </html>

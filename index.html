@@ -15,11 +15,7 @@
 <nav class="nav">
   <div class="container">
     <a class="nav-logo" href="index.html">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="14" cy="14" r="13" stroke="#3a9aaa" stroke-width="2"/>
-        <path d="M7 10l3.5 8L14 12l3.5 6L21 10" stroke="#3a9aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      WE3<span>Lab</span>
+      <img src="assets/logos/stanfordlogo.png" alt="Stanford logo" height="64">
     </a>
     <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -28,7 +24,6 @@
       <li><a href="index.html">Overview</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="people.html">People</a></li>
-      <li><a href="partnerships.html">Funding</a></li>
       <li><a href="funding.html">Funding</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -39,28 +34,17 @@
 <section class="hero">
   <div class="container">
     <div class="hero-content">
-      <div class="hero-badge">Water · Energy · Environment</div>
-      <h1>Engineering Solutions for a <em>Sustainable Future</em></h1>
-      <p>The WE3 Lab develops cutting-edge sensing, modeling, and data-driven approaches to tackle the world's most pressing water, energy, and environmental challenges.</p>
+      <a class="nav-logo" href="index.html">
+        <img src="assets/logos/WE3_Lab_Logo_black.png" alt="WE3 Lab logo" height="100">
+      </a>
+      <p><strong>The WE3 Lab develops cutting-edge sensing, modeling, and data-driven approaches to tackle the world's most pressing water, energy, and environmental challenges.</strong></p>
       <div class="hero-actions">
-        <a href="research.html" class="btn btn-primary">Explore Research</a>
-        <a href="people.html"   class="btn btn-outline">Meet the Team</a>
+        <a href="research.html" class="btn btn-black">Explore Research</a>
+        <a href="people.html"   class="btn btn-black">Meet the Team</a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ── Stats strip ─────────────────────────────────────── -->
-<div class="stats-strip">
-  <div class="container">
-    <div class="stats-grid">
-      <div><div class="stat-number">20+</div><div class="stat-label">Lab Members</div></div>
-      <div><div class="stat-number">3</div><div class="stat-label">Research Groups</div></div>
-      <div><div class="stat-number">50+</div><div class="stat-label">Publications</div></div>
-      <div><div class="stat-number">$8M+</div><div class="stat-label">Funded Research</div></div>
-    </div>
-  </div>
-</div>
 
 <!-- ── Mission ─────────────────────────────────────────── -->
 <section class="section">
@@ -107,43 +91,37 @@
       <h2>Recent News</h2>
       <div class="divider"></div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
+    <div id="news-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
 
-      <div class="card">
-        <div class="card-body">
-          <span style="font-size:.75rem;color:var(--teal);font-weight:600">April 2026</span>
-          <h4 style="color:var(--navy);margin:.4rem 0 .5rem">NSF Award for Smart Water Grid Project</h4>
-          <p style="font-size:.875rem">WE3 Lab receives a $1.2M NSF grant to develop adaptive digital twins for municipal water distribution networks.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <span style="font-size:.75rem;color:var(--teal);font-weight:600">March 2026</span>
-          <h4 style="color:var(--navy);margin:.4rem 0 .5rem">Best Paper at IEEE SMARTGRIDCOMM</h4>
-          <p style="font-size:.875rem">Congratulations to Emma Liu and Frank Okafor for their paper on physics-informed load forecasting under distribution shift.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <span style="font-size:.75rem;color:var(--teal);font-weight:600">February 2026</span>
-          <h4 style="color:var(--navy);margin:.4rem 0 .5rem">New Partnership with City Water Authority</h4>
-          <p style="font-size:.875rem">WE3 Lab partners with the City Water Authority to deploy a real-time contaminant monitoring network across 40 sensor nodes.</p>
-        </div>
-      </div>
+<!-- BEGIN:news-generated -->
+<!-- END:news-generated -->
 
     </div>
   </div>
 </section>
+<script>
+fetch('assets/news.json')
+  .then(r => r.json())
+  .then(items => {
+    const grid = document.getElementById('news-grid');
+    grid.innerHTML = items.map(item => `
+      <div class="card">
+        <div class="card-body">
+          <span style="font-size:.75rem;color:var(--teal);font-weight:600">${item.date}</span>
+          <h4 style="color:var(--navy);margin:.4rem 0 .5rem">
+            <a href="${item.link}" style="color:inherit;text-decoration:none">${item.headline}</a>
+          </h4>
+        </div>
+      </div>`).join('');
+  });
+</script>
 
 <!-- ── Footer ──────────────────────────────────────────── -->
 <footer>
   <div class="container">
     <div class="footer-inner">
       <div>
-        <div class="footer-logo">WE3<span>Lab</span></div>
-        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>University • City, State</p>
+        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>Stanford, CA</p>
       </div>
       <nav class="footer-links">
         <a href="index.html">Overview</a>
@@ -157,6 +135,5 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(chmod +x /Users/akshayrao/test_website/scripts/run_pipeline.sh)",
-      "Bash(python3 scripts/update_subgroup_members.py)"
+      "Bash(python3 scripts/update_subgroup_members.py)",
+      "Bash(python3 scripts/build_people_page.py)",
+      "WebSearch",
+      "WebFetch(domain:scholar.google.com)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:we3lab.stanford.edu)",
+      "WebFetch(domain:haochi-wu.github.io)"
     ]
   }
 }
