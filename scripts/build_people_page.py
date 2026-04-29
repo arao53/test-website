@@ -9,7 +9,7 @@ MEMBERS_JSON   = Path("members/members.json")
 SUBGROUPS_JSON = Path("research/subgroups.json")
 PEOPLE_HTML    = Path("people.html")
 
-ROLE_ORDER = ["PI", "postdoc", "phd student", "ms student", "undergrad", "staff", "alumni"]
+ROLE_ORDER = ["PI", "postdoc", "phd student", "ms student", "undergrad", "staff", "admin staff", "alumni"]
 
 def _create_placeholder(entry):
     path  = Path(entry["file"])
@@ -105,7 +105,8 @@ SECTION_LABEL = {
     "phd student": "PhD Students",
     "ms student":  "MS Students",
     "undergrad":   "Undergraduate Researchers",
-    "staff":       "Lab Staff",
+    "staff":       "Research Staff",
+    "admin staff": "Administrative Staff",
     "alumni":      "Alumni",
 }
 ROLE_DISPLAY = {
@@ -114,7 +115,8 @@ ROLE_DISPLAY = {
     "phd student": "PhD Student",
     "ms student":  "MS Student",
     "undergrad":   "Undergraduate Researcher",
-    "staff":       "Lab Staff",
+    "staff":       "Research Staff",
+    "admin staff": "Administrative Staff",
 }
 AV_COUNT = 8
 
@@ -209,15 +211,27 @@ def card_member(m, av):
     return html
 
 
+ALUMNI_ROLE_ORDER = ["staff", "postdoc", "phd", "ms", "undergrad"]
+
 def last_name(m):
     clean = re.sub(r"^Dr\.\s+", "", m["name"], flags=re.IGNORECASE).strip()
     return clean.split()[-1].lower()
 
 
+def alumni_sort_key(m):
+    dy = m.get("degree_year", "").strip().lower()
+    for i, label in enumerate(ALUMNI_ROLE_ORDER):
+        if dy.startswith(label):
+            return (i, last_name(m))
+    return (len(ALUMNI_ROLE_ORDER), last_name(m))
+
+
 def render_section(role, members, av_idx):
     if not members:
         return "", av_idx
-    if role != "PI":
+    if role == "alumni":
+        members = sorted(members, key=alumni_sort_key)
+    elif role != "PI":
         members = sorted(members, key=last_name)
     label    = SECTION_LABEL.get(role, role)
     is_pi    = role == "PI"
@@ -248,7 +262,7 @@ def main():
     for m in members:
         key = m["role"].lower()
         if key not in groups:
-            key = "staff"
+            key = "admin staff"
         groups[key].append(m)
 
     sections, av_idx = [], 0

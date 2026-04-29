@@ -28,6 +28,16 @@
       "scholar_id": "aqHdI_0AAAAJ",
       "scholar_url": "https://scholar.google.com/citations?user=aqHdI_0AAAAJ",
       "linkedin": "https://www.linkedin.com/in/nitish-ranjan-sarker/",
+      "website": "https://profiles.stanford.edu/nitishsarker",
+      "cv": ""
+    },
+    {
+      "name": "Dr. Laxmicharan Samineni",
+      "role": "postdoc",
+      "groups": ["separations"],
+      "scholar_id": "k_DTvJgAAAAJ&hl=en",
+      "scholar_url": "https://scholar.google.com/citations?user=k_DTvJgAAAAJ&hl=en",
+      "linkedin": "https://www.linkedin.com/in/laxmicharan-samineni-b3b5822b/",
       "website": "",
       "cv": ""
     },
@@ -100,6 +110,46 @@
       "linkedin": "https://www.linkedin.com/in/gina-kittleson-a694a3207/",
       "website": "",
       "cv": ""
+    },
+    {
+      "name": "Dr. Alexander Dudchenko",
+      "role": "staff",
+      "groups": ["energy flexibility", "separations", "infrastructure planning"],
+      "scholar_id": "",
+      "scholar_url": "",
+      "linkedin": "",
+      "website": "",
+      "cv": ""
+    },
+    {
+      "name": "Adhithyan Sakthivelu",
+      "role": "alumni",
+      "groups": ["energy flexibility"],
+      "scholar_id": "",
+      "scholar_url": "",
+      "linkedin": "",
+      "degree_year": "MS 2023",
+      "placement": "PhD student, UT Austin"
+    },
+    {
+      "name": "Dr. Yang Liu",
+      "role": "alumni",
+      "groups": ["energy flexibility", "infrastructure planning", "separations"],
+      "scholar_id": "",
+      "scholar_url": "",
+      "linkedin": "",
+      "degree_year": "PhD 2022",
+      "placement": "Associate, McKinsey & Company"
+    },
+    {
+      "name": "Dr. Timothy Bartholomew",
+      "role": "alumni",
+      "groups": ["energy flexibility", "separations", "water technology"],
+      "scholar_id": "",
+      "scholar_url": "",
+      "linkedin": "",
+      "degree_year": "PhD 2020",
+      "placement": "Founder, Horizon Modeling Solutions"
     }
   ]
 }

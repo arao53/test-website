@@ -157,6 +157,8 @@ def main():
     # Group members by their subgroup(s)
     by_group: dict[str, list[dict]] = {g: [] for g in GROUP_TO_FILE}
     for m in members:
+        if m.get("role", "").strip().lower() == "alumni":
+            continue
         for g in m.get("groups", []):
             key = g.strip().lower()
             if key in by_group:
