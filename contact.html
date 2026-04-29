@@ -3,40 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — WE3 Lab</title>
+  <title>Contact Us — WE3 Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
 
-<!-- ── Navigation ─────────────────────────────────────── -->
-<nav class="nav">
-  <div class="container">
-    <a class="nav-logo" href="index.html">
-      <img src="assets/logos/stanfordlogo.png" alt="Stanford logo" height="64">
-    </a>
-    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="index.html">Overview</a></li>
-      <li class="dropdown">
-        <a href="research.html">Research</a>
-        <ul class="dropdown-content">
-          <li><a href="research/energyflexibility.html">Energy Flexibility</a></li>
-          <li><a href="research/infrastructureplanning.html">Infrastructure Planning</a></li>
-          <li><a href="research/separations.html">Separations Technology</a></li>
-        </ul>
-      </li>
-      <li><a href="partnerships.html">Partnerships</a></li>      
-      <li><a href="people.html">People</a></li>
-      <li><a href="support.html">Support</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<!-- ── Site Header (Sticky) ────────────────────────────── -->
+<div class="site-header">
+  <div class="identity-bar">
+    <div class="container">
+      <a href="https://www.stanford.edu">Stanford University</a>
+    </div>
   </div>
-</nav>
+  <nav class="nav">
+    <div class="container">
+      <a class="nav-logo" href="index.html">
+        <img src="assets/logos/WE3_Lab_Logo_black.png" alt="WE3 Lab" height="48">
+      </a>
+      <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">Who We Are</a></li>
+        <li class="dropdown">
+          <a href="research.html">What We Do</a>
+          <ul class="dropdown-content">
+            <li><a href="research/energyflexibility.html">Energy Flexibility</a></li>
+            <li><a href="research/infrastructureplanning.html">Infrastructure Planning</a></li>
+            <li><a href="research/separations.html">Separations Technology</a></li>
+          </ul>
+        </li>
+        <li><a href="why-we-do-it.html">Why We Do It</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<!-- ── Page Banner ─────────────────────────────────────── -->
+<div class="page-banner">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>INSERT PAGE DESCRIPTION HERE</p>
+  </div>
+</div>
 
 <!-- ── Main contact section ────────────────────────────── -->
 <section class="section">
@@ -48,22 +63,21 @@
         <h3>Get in Touch</h3>
         <p style="margin-bottom:2rem">Use the form to reach out or find us directly at the contact details below.</p>
 
-
-        <!-- Prospective students box -->
-        <div style="margin-top:2rem;padding:1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-left:4px solid var(--maroon);border-radius:0 var(--radius) var(--radius) 0">
-          <h4 style="color:var(--navy);margin-bottom:.4rem">Prospective Post-docs</h4>
+        <!-- Prospective postdocs box -->
+        <div style="margin-top:2rem;padding:1.25rem;background:var(--bright-snow);border:1px solid var(--gray-200);border-left:4px solid var(--deep-space);border-radius:0 var(--radius) var(--radius) 0">
+          <h4 style="color:var(--deep-space);margin-bottom:.4rem">Prospective Post-docs</h4>
           <p style="font-size:.875rem">If you are interested in joining as a Post-doc, please apply through the department's official admissions portal and mention WE3 Lab in your statement. You may also email the PI directly with your CV and research interests — we read every inquiry.</p>
         </div>
 
-        <!-- Prospective students box -->
-        <div style="margin-top:2rem;padding:1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-left:4px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0">
-          <h4 style="color:var(--navy);margin-bottom:.4rem">Prospective Graduate Students</h4>
+        <!-- Prospective grad students box -->
+        <div style="margin-top:2rem;padding:1.25rem;background:var(--bright-snow);border:1px solid var(--gray-200);border-left:4px solid var(--cerulean);border-radius:0 var(--radius) var(--radius) 0">
+          <h4 style="color:var(--deep-space);margin-bottom:.4rem">Prospective Graduate Students</h4>
           <p style="font-size:.875rem">If you are interested in joining as a PhD student, please apply through the department's official admissions portal and mention WE3 Lab in your statement. You may also email the PI directly with your CV and research interests — we read every inquiry.</p>
         </div>
 
         <!-- Visiting / undergrad box -->
-        <div style="margin-top:2rem;padding:1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0">
-          <h4 style="color:var(--navy);margin-bottom:.4rem">Undergraduate &amp; Visiting Researchers</h4>
+        <div style="margin-top:2rem;padding:1.25rem;background:var(--bright-snow);border:1px solid var(--gray-200);border-left:4px solid #b7770d;border-radius:0 var(--radius) var(--radius) 0">
+          <h4 style="color:var(--deep-space);margin-bottom:.4rem">Undergraduate &amp; Visiting Researchers</h4>
           <p style="font-size:.875rem">We regularly host undergraduates for independent study and REU projects. Visiting researchers and international students are also welcome — please reach out with a CV and a one-paragraph statement of interest.</p>
         </div>
       </div>
@@ -71,20 +85,20 @@
       <!-- Right: Form -->
       <div>
         <div class="card card-body" style="padding:2rem">
-          <h3 style="color:var(--navy);margin-bottom:1.5rem">Send a Message</h3>
+          <h3 style="color:var(--deep-space);margin-bottom:1.5rem">Send a Message</h3>
           <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <div class="form-row">
               <div class="form-group">
-                <label for="first-name">First Name <span style="color:var(--teal)">*</span></label>
+                <label for="first-name">First Name <span style="color:var(--cerulean)">*</span></label>
                 <input type="text" id="first-name" name="first_name" required placeholder="Jane" />
               </div>
               <div class="form-group">
-                <label for="last-name">Last Name <span style="color:var(--teal)">*</span></label>
+                <label for="last-name">Last Name <span style="color:var(--cerulean)">*</span></label>
                 <input type="text" id="last-name" name="last_name" required placeholder="Smith" />
               </div>
             </div>
             <div class="form-group">
-              <label for="email">Email Address <span style="color:var(--teal)">*</span></label>
+              <label for="email">Email Address <span style="color:var(--cerulean)">*</span></label>
               <input type="email" id="email" name="email" required placeholder="jane@university.edu" />
             </div>
             <div class="form-group">
@@ -92,7 +106,7 @@
               <input type="text" id="affiliation" name="affiliation" placeholder="University of Example" />
             </div>
             <div class="form-group">
-              <label for="inquiry-type">Inquiry Type <span style="color:var(--teal)">*</span></label>
+              <label for="inquiry-type">Inquiry Type <span style="color:var(--cerulean)">*</span></label>
               <select id="inquiry-type" name="inquiry_type" required>
                 <option value="" disabled selected>Select one…</option>
                 <option value="prospective-phd">Prospective PhD Student</option>
@@ -105,10 +119,10 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Message <span style="color:var(--teal)">*</span></label>
+              <label for="message">Message <span style="color:var(--cerulean)">*</span></label>
               <textarea id="message" name="message" rows="5" required placeholder="What would you like to discuss?"></textarea>
             </div>
-            <button type="submit" class="btn btn-teal" style="width:100%;justify-content:center">Send Message &rarr;</button>
+            <button type="submit" class="btn btn-navy" style="width:100%;justify-content:center">Send Message &rarr;</button>
             <p style="font-size:.78rem;color:var(--gray-500);margin-top:.75rem;text-align:center">
               Suspected AI-generated outreach requests will be automatically flagged and de-prioritized.
             </p>
@@ -120,10 +134,10 @@
   </div>
 </section>
 
-<!-- ── Map / Location placeholder ─────────────────────── -->
-<section class="section-sm" style="background:var(--gray-50);border-top:1px solid var(--gray-200)">
+<!-- ── Map / Location ──────────────────────────────────── -->
+<section class="section-sm" style="background:var(--bright-snow);border-top:1px solid var(--gray-200)">
   <div class="container text-center">
-    <h2 class="text-navy" style="margin-bottom:.5rem">Find Us</h2>
+    <h2 class="text-deep-space" style="margin-bottom:.5rem">Find Us</h2>
     <p style="color:var(--gray-500);margin-bottom:2rem">We are located in the Engineering complex on the main campus.</p>
     <iframe
       src="https://maps.google.com/maps?q=473+Via+Ortega,Stanford,CA+94305&hl=en&z=16&output=embed"
@@ -135,16 +149,66 @@
   </div>
 </section>
 
-<!-- ── Footer ──────────────────────────────────────────── -->
-<footer>
+<!-- ── WE3 Lab Footer ───────────────────────────────────── -->
+<footer class="footer-we3">
   <div class="container">
     <div class="footer-inner">
       <div>
-        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>Stanford, CA</p>
+        <img src="assets/logos/WE3_Lab_Logo_black.png" alt="WE3 Lab" height="40">
+        <p class="footer-dept">Department of Civil &amp; Environmental Engineering<br>Stanford, CA</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/we3-lab" target="_blank" rel="noopener" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=04f-_PIAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" title="Google Scholar">
+          <i class="fa-brands fa-google-scholar"></i>
+        </a>
+        <a href="https://github.com/we3lab" target="_blank" rel="noopener" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:mauter@stanford.edu" title="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
       </div>
     </div>
   </div>
 </footer>
+
+<!-- ── Stanford Global Footer ──────────────────────────── -->
+<footer class="footer-stanford">
+  <div class="container">
+    <div class="footer-stanford-inner">
+      <div class="footer-stanford-logo">
+        <a href="https://www.stanford.edu">Stanford<br>University</a>
+      </div>
+      <ul class="footer-stanford-links">
+        <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+        <li><a href="https://visit.stanford.edu/plan/">Maps &amp; Directions</a></li>
+        <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+        <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+        <li><a href="https://www.stanford.edu/site/terms/">Terms of Use</a></li>
+        <li><a href="https://www.stanford.edu/site/privacy/">Privacy</a></li>
+        <li><a href="https://uit.stanford.edu/security/copyright-infringement">Copyright</a></li>
+        <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4">Trademarks</a></li>
+        <li><a href="https://studentservices.stanford.edu/more-resources/student-policies/non-academic/non-discrimination">Non-Discrimination</a></li>
+        <li><a href="https://www.stanford.edu/site/accessibility">Accessibility</a></li>
+      </ul>
+      <p class="footer-stanford-copy">&copy; Stanford University.&nbsp; Stanford, California 94305.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.querySelector('.nav-hamburger');
+  const links = document.querySelector('.nav-links');
+  if (btn && links) {
+    btn.addEventListener('click', () => {
+      links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+  }
+</script>
 
 </body>
 </html>

@@ -8,32 +8,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
 
-<!-- ── Navigation ─────────────────────────────────────── -->
-<nav class="nav">
-  <div class="container">
-    <a class="nav-logo" href="../index.html">
-      <img src="../assets/logos/stanfordlogo.png" alt="Stanford logo" height="64">
-    </a>
-    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="../index.html">Overview</a></li>
-      <li><a href="../research.html">Research</a></li>
-      <li><a href="../people.html">People</a></li>
-      <li><a href="../funding.html">Funding</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
+<!-- ── Site Header (Sticky) ────────────────────────────── -->
+<div class="site-header">
+  <div class="identity-bar">
+    <div class="container">
+      <a href="https://www.stanford.edu">Stanford University</a>
+    </div>
   </div>
-</nav>
+  <nav class="nav">
+    <div class="container">
+      <a class="nav-logo" href="../index.html">
+        <img src="../assets/logos/WE3_Lab_Logo_black.png" alt="WE3 Lab" height="48">
+      </a>
+      <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../people.html">Who We Are</a></li>
+        <li class="dropdown">
+          <a href="../research.html" class="active">What We Do</a>
+          <ul class="dropdown-content">
+            <li><a href="../research/energyflexibility.html">Energy Flexibility</a></li>
+            <li><a href="../research/infrastructureplanning.html">Infrastructure Planning</a></li>
+            <li><a href="../research/separations.html">Separations Technology</a></li>
+          </ul>
+        </li>
+        <li><a href="../why-we-do-it.html">Why We Do It</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-<!-- ── Page Header ─────────────────────────────────────── -->
-<div class="page-header">
+<!-- ── Page Banner ─────────────────────────────────────── -->
+<div class="page-banner">
   <div class="container">
-    <div class="breadcrumb"><a href="../research.html">Research</a> &rsaquo; Energy Flexibility</div>
+    <div class="breadcrumb"><a href="../research.html">What We Do</a> &rsaquo; Energy Flexibility</div>
     <h1>⚡ Energy Flexibility</h1>
     <p>Optimization and control frameworks for demand-side flexibility, renewable integration, and distributed energy resource coordination.</p>
   </div>
@@ -43,14 +58,14 @@
 <section class="section">
   <div class="container">
     <div style="max-width:760px">
-      <h2 class="text-navy">Research Overview</h2>
+      <h2 class="text-deep-space">Research Overview</h2>
       <div class="divider" style="margin:1rem 0"></div>
       <p>The Energy Flexibility group develops the algorithms, models, and market mechanisms needed to make electricity demand an active participant in grid balancing. As grids incorporate more variable renewable energy, the ability to shift, shed, or reshape loads in real time becomes increasingly valuable — and increasingly necessary for reliability and cost-efficiency.</p>
       <p>Our work spans three scales: individual assets (EV chargers, HVAC, water heaters, industrial equipment), aggregations of assets managed by utilities or aggregators, and grid-level market clearing and dispatch. Methodologically we draw on stochastic and robust optimization, model predictive control, reinforcement learning, and mechanism design.</p>
     </div>
 
     <!-- Active Projects -->
-    <h2 class="text-navy" style="margin-top:3rem;margin-bottom:1.5rem">Active Projects</h2>
+    <h2 class="text-deep-space" style="margin-top:3rem;margin-bottom:1.5rem">Active Projects</h2>
     <div class="project-grid">
 
       <div class="project-card">
@@ -80,7 +95,7 @@
     </div>
 
     <!-- Publications -->
-    <h2 class="text-navy" style="margin-top:3rem;margin-bottom:1.5rem">Selected Publications</h2>
+    <h2 class="text-deep-space" style="margin-top:3rem;margin-bottom:1.5rem">Selected Publications</h2>
     <ul class="publication-list">
       <li>
         <strong>Distribution-Robust Load Forecasting with Physics-Informed Neural Networks</strong>
@@ -105,55 +120,97 @@
     </ul>
 
     <!-- Team -->
-    <h2 class="text-navy" style="margin-top:3rem;margin-bottom:1.5rem">Group Members</h2>
+    <h2 class="text-deep-space" style="margin-top:3rem;margin-bottom:1.5rem">Group Members</h2>
     <div style="display:flex;flex-wrap:wrap;gap:1rem">
-      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
-        <strong style="color:var(--navy)">Dr. Erin Musabandesu</strong> <span style="color:var(--teal)">· Postdoctoral Researcher</span>
+      <div style="background:var(--bright-snow);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--deep-space)">Dr. Erin Musabandesu</strong> <span style="color:var(--cerulean)">· Postdoctoral Researcher</span>
       </div>
-      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
-        <strong style="color:var(--navy)">Dr. Haochi Wu</strong> <span style="color:var(--teal)">· Postdoctoral Researcher</span>
+      <div style="background:var(--bright-snow);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--deep-space)">Dr. Haochi Wu</strong> <span style="color:var(--cerulean)">· Postdoctoral Researcher</span>
       </div>
-      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
-        <strong style="color:var(--navy)">Fletcher Chapin</strong> <span style="color:var(--teal)">· PhD Student</span>
+      <div style="background:var(--bright-snow);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--deep-space)">Fletcher Chapin</strong> <span style="color:var(--cerulean)">· PhD Student</span>
       </div>
-      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
-        <strong style="color:var(--navy)">Akshay Rao</strong> <span style="color:var(--teal)">· PhD Student</span>
+      <div style="background:var(--bright-snow);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--deep-space)">Akshay Rao</strong> <span style="color:var(--cerulean)">· PhD Student</span>
       </div>
-      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
-        <strong style="color:var(--navy)">Carson Tucker</strong> <span style="color:var(--teal)">· PhD Student</span>
+      <div style="background:var(--bright-snow);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--deep-space)">Carson Tucker</strong> <span style="color:var(--cerulean)">· PhD Student</span>
       </div>
-      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
-        <strong style="color:var(--navy)">Daly Wettermark</strong> <span style="color:var(--teal)">· PhD Student</span>
+      <div style="background:var(--bright-snow);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--deep-space)">Daly Wettermark</strong> <span style="color:var(--cerulean)">· PhD Student</span>
       </div>
-      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
-        <strong style="color:var(--navy)">Dr. Alexander Dudchenko</strong> <span style="color:var(--teal)">· Research Staff</span>
+      <div style="background:var(--bright-snow);border:1px solid var(--gray-200);border-radius:var(--radius);padding:.75rem 1.25rem;font-size:.875rem">
+        <strong style="color:var(--deep-space)">Dr. Alexander Dudchenko</strong> <span style="color:var(--cerulean)">· Research Staff</span>
       </div>
     </div>
 
     <div style="margin-top:2.5rem">
-      <a href="../research.html" class="btn btn-navy">&larr; Back to Research</a>
+      <a href="../research.html" class="btn btn-navy">&larr; Back to What We Do</a>
     </div>
   </div>
 </section>
 
-<!-- ── Footer ──────────────────────────────────────────── -->
-<footer>
+<!-- ── WE3 Lab Footer ───────────────────────────────────── -->
+<footer class="footer-we3">
   <div class="container">
     <div class="footer-inner">
       <div>
-        <div class="footer-logo">WE3<span>Lab</span></div>
-        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>University • City, State</p>
+        <img src="../assets/logos/WE3_Lab_Logo_black.png" alt="WE3 Lab" height="40">
+        <p class="footer-dept">Department of Civil &amp; Environmental Engineering<br>Stanford, CA</p>
       </div>
-      <nav class="footer-links">
-        <a href="../index.html">Overview</a>
-        <a href="../research.html">Research</a>
-        <a href="../people.html">People</a>
-        <a href="../contact.html">Contact</a>
-      </nav>
-      <p style="font-size:.8rem">&copy; 2026 WE3 Lab. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/we3-lab" target="_blank" rel="noopener" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=04f-_PIAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" title="Google Scholar">
+          <i class="fa-brands fa-google-scholar"></i>
+        </a>
+        <a href="https://github.com/we3lab" target="_blank" rel="noopener" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:mauter@stanford.edu" title="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
+
+<!-- ── Stanford Global Footer ──────────────────────────── -->
+<footer class="footer-stanford">
+  <div class="container">
+    <div class="footer-stanford-inner">
+      <div class="footer-stanford-logo">
+        <a href="https://www.stanford.edu">Stanford<br>University</a>
+      </div>
+      <ul class="footer-stanford-links">
+        <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+        <li><a href="https://visit.stanford.edu/plan/">Maps &amp; Directions</a></li>
+        <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+        <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+        <li><a href="https://www.stanford.edu/site/terms/">Terms of Use</a></li>
+        <li><a href="https://www.stanford.edu/site/privacy/">Privacy</a></li>
+        <li><a href="https://uit.stanford.edu/security/copyright-infringement">Copyright</a></li>
+        <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4">Trademarks</a></li>
+        <li><a href="https://studentservices.stanford.edu/more-resources/student-policies/non-academic/non-discrimination">Non-Discrimination</a></li>
+        <li><a href="https://www.stanford.edu/site/accessibility">Accessibility</a></li>
+      </ul>
+      <p class="footer-stanford-copy">&copy; Stanford University.&nbsp; Stanford, California 94305.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.querySelector('.nav-hamburger');
+  const links = document.querySelector('.nav-links');
+  if (btn && links) {
+    btn.addEventListener('click', () => {
+      links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+  }
+</script>
 
 </body>
 </html>

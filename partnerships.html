@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>People — WE3 Lab</title>
+  <title>Partnerships — WE3 Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -12,46 +12,48 @@
 </head>
 <body>
 
-<!-- ── Navigation ─────────────────────────────────────── -->
-<nav class="nav">
-  <div class="container">
-    <a class="nav-logo" href="index.html">
-      <img src="assets/logos/stanfordlogo.png" alt="Stanford logo" height="64">
-    </a>
-    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="index.html">Overview</a></li>
-      <li class="dropdown">
-        <a href="research.html">Research</a>
-        <ul class="dropdown-content">
-          <li><a href="research/energyflexibility.html">Energy Flexibility</a></li>
-          <li><a href="research/infrastructureplanning.html">Infrastructure Planning</a></li>
-          <li><a href="research/separations.html">Separations Technology</a></li>
-        </ul>
-      </li>
-      <li><a href="partnerships.html">Partnerships</a></li>      
-      <li><a href="people.html">People</a></li>
-      <li><a href="support.html">Support</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ── Page Header ─────────────────────────────────────── -->
-<section class="hero" style="padding:4rem 0 3rem; background: none !important; background-color: transparent !important;">
-  <div class="container" style="background: none !important; background-color: transparent !important;">
-    <div class="hero-content" style="background: none !important; background-color: transparent !important;">
-      <h1 style="background: none !important; background-color: transparent !important; margin: 0;">Partnerships</h1>
-      <p style="background: none !important; background-color: transparent !important; margin-top: .5rem;">
-        <strong>Our work is made possible through the generous support of government agencies, industry partners, and municipalities who share our commitment to sustainable infrastructure and environmental stewardship.</strong>
-      </p>
+<!-- ── Site Header (Sticky) ────────────────────────────── -->
+<div class="site-header">
+  <div class="identity-bar">
+    <div class="container">
+      <a href="https://www.stanford.edu">Stanford University</a>
     </div>
   </div>
-</section>
+  <nav class="nav">
+    <div class="container">
+      <a class="nav-logo" href="index.html">
+        <img src="assets/logos/WE3_Lab_Logo_black.png" alt="WE3 Lab" height="48">
+      </a>
+      <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">Who We Are</a></li>
+        <li class="dropdown">
+          <a href="research.html">What We Do</a>
+          <ul class="dropdown-content">
+            <li><a href="research/energyflexibility.html">Energy Flexibility</a></li>
+            <li><a href="research/infrastructureplanning.html">Infrastructure Planning</a></li>
+            <li><a href="research/separations.html">Separations Technology</a></li>
+          </ul>
+        </li>
+        <li><a href="why-we-do-it.html">Why We Do It</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-<!-- ── Project Partners──────────────────────────────── -->
+<!-- ── Page Banner ─────────────────────────────────────── -->
+<div class="page-banner">
+  <div class="container">
+    <h1>Partnerships</h1>
+    <p>INSERT PAGE DESCRIPTION HERE</p>
+  </div>
+</div>
+
+<!-- ── Project Partners ────────────────────────────────── -->
 <section class="section" id="funders">
   <div class="container">
     <div class="section-title">
@@ -59,17 +61,79 @@
       <div class="divider"></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem;margin-bottom:3rem">
-      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:1.25rem;text-align:center">
-        <div style="font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:.35rem">City of Santa Barbara</div>
+      <div style="background:var(--bright-snow);border:1px solid var(--gray-200);border-radius:var(--radius);padding:1.25rem;text-align:center">
+        <div style="font-size:1.5rem;font-weight:800;color:var(--deep-space);margin-bottom:.35rem">City of Santa Barbara</div>
       </div>
-      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:1.25rem;text-align:center">
-        <div style="font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:.35rem">Silicon Valley Clean Water</div>
+      <div style="background:var(--bright-snow);border:1px solid var(--gray-200);border-radius:var(--radius);padding:1.25rem;text-align:center">
+        <div style="font-size:1.5rem;font-weight:800;color:var(--deep-space);margin-bottom:.35rem">Silicon Valley Clean Water</div>
       </div>
-      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:1.25rem;text-align:center">
-        <div style="font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:.35rem">Doerr School of Sustainability</div>
+      <div style="background:var(--bright-snow);border:1px solid var(--gray-200);border-radius:var(--radius);padding:1.25rem;text-align:center">
+        <div style="font-size:1.5rem;font-weight:800;color:var(--deep-space);margin-bottom:.35rem">Doerr School of Sustainability</div>
       </div>
+    </div>
   </div>
 </section>
+
+<!-- ── WE3 Lab Footer ───────────────────────────────────── -->
+<footer class="footer-we3">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <img src="assets/logos/WE3_Lab_Logo_black.png" alt="WE3 Lab" height="40">
+        <p class="footer-dept">Department of Civil &amp; Environmental Engineering<br>Stanford, CA</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/we3-lab" target="_blank" rel="noopener" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=04f-_PIAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" title="Google Scholar">
+          <i class="fa-brands fa-google-scholar"></i>
+        </a>
+        <a href="https://github.com/we3lab" target="_blank" rel="noopener" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:mauter@stanford.edu" title="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Stanford Global Footer ──────────────────────────── -->
+<footer class="footer-stanford">
+  <div class="container">
+    <div class="footer-stanford-inner">
+      <div class="footer-stanford-logo">
+        <a href="https://www.stanford.edu">Stanford<br>University</a>
+      </div>
+      <ul class="footer-stanford-links">
+        <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+        <li><a href="https://visit.stanford.edu/plan/">Maps &amp; Directions</a></li>
+        <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+        <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+        <li><a href="https://www.stanford.edu/site/terms/">Terms of Use</a></li>
+        <li><a href="https://www.stanford.edu/site/privacy/">Privacy</a></li>
+        <li><a href="https://uit.stanford.edu/security/copyright-infringement">Copyright</a></li>
+        <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4">Trademarks</a></li>
+        <li><a href="https://studentservices.stanford.edu/more-resources/student-policies/non-academic/non-discrimination">Non-Discrimination</a></li>
+        <li><a href="https://www.stanford.edu/site/accessibility">Accessibility</a></li>
+      </ul>
+      <p class="footer-stanford-copy">&copy; Stanford University.&nbsp; Stanford, California 94305.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.querySelector('.nav-hamburger');
+  const links = document.querySelector('.nav-links');
+  if (btn && links) {
+    btn.addEventListener('click', () => {
+      links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+  }
+</script>
 
 </body>
 </html>
