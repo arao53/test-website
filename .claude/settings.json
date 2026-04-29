@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(chmod +x /Users/akshayrao/test_website/scripts/run_pipeline.sh)"
+      "Bash(chmod +x /Users/akshayrao/test_website/scripts/run_pipeline.sh)",
+      "Bash(python3 scripts/update_subgroup_members.py)"
     ]
   }
 }
