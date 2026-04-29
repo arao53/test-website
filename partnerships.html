@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People — WE3 Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav class="nav">
+  <div class="container">
+    <a class="nav-logo" href="index.html">
+      <img src="assets/logos/stanfordlogo.png" alt="Stanford logo" height="64">
+    </a>
+    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Overview</a></li>
+      <li class="dropdown">
+        <a href="research.html">Research</a>
+        <ul class="dropdown-content">
+          <li><a href="research/energyflexibility.html">Energy Flexibility</a></li>
+          <li><a href="research/infrastructureplanning.html">Infrastructure Planning</a></li>
+          <li><a href="research/separations.html">Separations Technology</a></li>
+        </ul>
+      </li>
+      <li><a href="partnerships.html">Partnerships</a></li>      
+      <li><a href="people.html">People</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── Page Header ─────────────────────────────────────── -->
+<section class="hero" style="padding:4rem 0 3rem; background: none !important; background-color: transparent !important;">
+  <div class="container" style="background: none !important; background-color: transparent !important;">
+    <div class="hero-content" style="background: none !important; background-color: transparent !important;">
+      <h1 style="background: none !important; background-color: transparent !important; margin: 0;">Partnerships</h1>
+      <p style="background: none !important; background-color: transparent !important; margin-top: .5rem;">
+        <strong>Our work is made possible through the generous support of government agencies, industry partners, and municipalities who share our commitment to sustainable infrastructure and environmental stewardship.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Project Partners──────────────────────────────── -->
+<section class="section" id="funders">
+  <div class="container">
+    <div class="section-title">
+      <h2>Project Partners</h2>
+      <div class="divider"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem;margin-bottom:3rem">
+      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:1.25rem;text-align:center">
+        <div style="font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:.35rem">City of Santa Barbara</div>
+      </div>
+      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:1.25rem;text-align:center">
+        <div style="font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:.35rem">Silicon Valley Clean Water</div>
+      </div>
+      <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:1.25rem;text-align:center">
+        <div style="font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:.35rem">Doerr School of Sustainability</div>
+      </div>
+  </div>
+</section>
+
+</body>
+</html>
