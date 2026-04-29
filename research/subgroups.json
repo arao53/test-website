@@ -1,0 +1,24 @@
+{
+  "subgroups": [
+    {
+      "key": "energy flexibility",
+      "label": "Energy Flexibility",
+      "file": "research/energyflexibility.html"
+    },
+    {
+      "key": "infrastructure planning",
+      "label": "Infrastructure Planning",
+      "file": "research/infrastructureplanning.html"
+    },
+    {
+      "key": "separations",
+      "label": "Separations",
+      "file": "research/separations.html"
+    },
+    {
+      "key": "water technology",
+      "label": "Water Technology",
+      "file": "research/watertechnology.html"
+    }
+  ]
+}

@@ -8,12 +8,91 @@ import json
 import re
 from pathlib import Path
 
-GROUP_TO_FILE = {
-    "energy flexibility":      Path("research/energyflexibility.html"),
-    "infrastructure planning": Path("research/infrastructureplanning.html"),
-    "separations":             Path("research/separations.html"),
-    "water technology":        Path("research/watertechnology.html"),
-}
+def _create_placeholder(entry: dict) -> None:
+    path  = Path(entry["file"])
+    label = entry["label"]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{label} — WE3 Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a class="nav-logo" href="../index.html">
+      <img src="../assets/logos/stanfordlogo.png" alt="Stanford logo" height="64">
+    </a>
+    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Overview</a></li>
+      <li><a href="../research.html">Research</a></li>
+      <li><a href="../people.html">People</a></li>
+      <li><a href="../funding.html">Funding</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="../research.html">Research</a> &rsaquo; {label}</div>
+    <h1>{label}</h1>
+    <p>This page is under development.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <!-- Team -->
+    <h2 class="text-navy">Group Members</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem">
+      <p style="color:var(--gray-500);font-size:.875rem">No members currently assigned to this group.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">WE3<span>Lab</span></div>
+        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>Stanford University</p>
+      </div>
+      <nav class="footer-links">
+        <a href="../index.html">Overview</a>
+        <a href="../research.html">Research</a>
+        <a href="../people.html">People</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <p style="font-size:.8rem">&copy; 2026 WE3 Lab. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+''')
+    print(f"  CREATED  {entry['file']} (placeholder page for '{entry['key']}')")
+
+
+def _load_group_to_file() -> dict[str, Path]:
+    entries = json.loads(Path("research/subgroups.json").read_text())["subgroups"]
+    for e in entries:
+        if not Path(e["file"]).exists():
+            _create_placeholder(e)
+    return {e["key"]: Path(e["file"]) for e in entries}
+
+GROUP_TO_FILE = _load_group_to_file()
 
 ROLE_LABEL = {
     "pi":                     "Principal Investigator",
@@ -84,10 +163,6 @@ def main():
                 by_group[key].append(m)
 
     for group, html_path in GROUP_TO_FILE.items():
-        if not html_path.exists():
-            print(f"  SKIP  {html_path.name} (file not found)")
-            continue
-
         group_members = by_group[group]
         html = html_path.read_text()
 

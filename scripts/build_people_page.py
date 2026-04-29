@@ -5,23 +5,100 @@ import json
 import re
 from pathlib import Path
 
-MEMBERS_JSON = Path("members/members.json")
-PEOPLE_HTML  = Path("people.html")
+MEMBERS_JSON   = Path("members/members.json")
+SUBGROUPS_JSON = Path("research/subgroups.json")
+PEOPLE_HTML    = Path("people.html")
 
 ROLE_ORDER = ["PI", "postdoc", "phd student", "ms student", "undergrad", "staff", "alumni"]
-GROUP_URLS = {
-    "energy flexibility": "research/energyflexibility.html",
-    "infrastructure planning": "research/infrastructureplanning.html",
-    "separations": "research/separations.html",
-    "water technology": "research/watertechnology.html",
-}
 
-GROUP_LABELS = {
-    "energy flexibility":   "Energy Flexibility",
-    "water and wastewater": "Water and Wastewater",
-    "systems planning":     "Systems Planning",
-    "water technology":     "Water Technology",
-}
+def _create_placeholder(entry):
+    path  = Path(entry["file"])
+    label = entry["label"]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{label} — WE3 Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a class="nav-logo" href="../index.html">
+      <img src="../assets/logos/stanfordlogo.png" alt="Stanford logo" height="64">
+    </a>
+    <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Overview</a></li>
+      <li><a href="../research.html">Research</a></li>
+      <li><a href="../people.html">People</a></li>
+      <li><a href="../funding.html">Funding</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="../research.html">Research</a> &rsaquo; {label}</div>
+    <h1>{label}</h1>
+    <p>This page is under development.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <h2 class="text-navy">Group Members</h2>
+    <!-- Team -->
+    <h2 class="text-navy">Group Members</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem">
+      <p style="color:var(--gray-500);font-size:.875rem">No members currently assigned to this group.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">WE3<span>Lab</span></div>
+        <p style="margin-top:.4rem;font-size:.8rem">Department of Civil &amp; Environmental Engineering<br>Stanford University</p>
+      </div>
+      <nav class="footer-links">
+        <a href="../index.html">Overview</a>
+        <a href="../research.html">Research</a>
+        <a href="../people.html">People</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <p style="font-size:.8rem">&copy; 2026 WE3 Lab. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+''')
+    print(f"  CREATED  {entry['file']} (placeholder page for '{entry['key']}')")
+
+
+def _load_subgroups():
+    entries = json.loads(SUBGROUPS_JSON.read_text())["subgroups"]
+    for e in entries:
+        if not Path(e["file"]).exists():
+            _create_placeholder(e)
+    urls   = {e["key"]: e["file"]  for e in entries}
+    labels = {e["key"]: e["label"] for e in entries}
+    return urls, labels
+
+GROUP_URLS, GROUP_LABELS = _load_subgroups()
 SECTION_LABEL = {
     "PI":          "Principal Investigator",
     "postdoc":     "Postdoctoral Researchers",
