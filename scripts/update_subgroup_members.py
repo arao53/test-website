@@ -8,13 +8,11 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent
-
 GROUP_TO_FILE = {
-    "energy flexibility":  ROOT / "research" / "energyflexibility.html",
-    "infrastructure planning": ROOT / "research" / "infrastructureplanning.html",
-    "separations":    ROOT / "research" / "separations.html",
-    "water technology":    ROOT / "research" / "watertechnology.html",
+    "energy flexibility":      Path("research/energyflexibility.html"),
+    "infrastructure planning": Path("research/infrastructureplanning.html"),
+    "separations":             Path("research/separations.html"),
+    "water technology":        Path("research/watertechnology.html"),
 }
 
 ROLE_LABEL = {
@@ -26,6 +24,15 @@ ROLE_LABEL = {
     "undergraduate researcher":"Undergraduate Researcher",
     "staff":                  "Research Staff",
 }
+
+ROLE_ORDER = ["pi", "postdoc", "phd student", "ms student", "undergraduate", "undergraduate researcher", "staff"]
+
+
+def role_sort_key(member: dict) -> tuple:
+    raw = member.get("role", "").strip().lower()
+    order = ROLE_ORDER.index(raw) if raw in ROLE_ORDER else len(ROLE_ORDER)
+    last_name = member["name"].strip().split()[-1].lower()
+    return (order, last_name)
 
 SECTION_RE = re.compile(
     r'(<!-- Team -->\s*\n\s*<h2[^>]*>Group Members</h2>\s*\n\s*)'
@@ -63,8 +70,7 @@ def build_section(prefix: str, cards: list[str]) -> str:
 
 
 def main():
-    members_path = ROOT / "members" / "members.json"
-    with open(members_path) as f:
+    with open(Path("members/members.json")) as f:
         data = json.load(f)
 
     members = data["members"]
@@ -92,7 +98,7 @@ def main():
         if not group_members:
             cards = ['      <p style="color:var(--gray-500);font-size:.875rem">No members currently assigned to this group.</p>']
         else:
-            cards = [make_card(m) for m in group_members]
+            cards = [make_card(m) for m in sorted(group_members, key=role_sort_key)]
 
         def replacer(m):
             return build_section(m.group(1), cards)

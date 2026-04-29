@@ -5,17 +5,17 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent
-MEMBERS_JSON = ROOT / "members" / "members.json"
-PEOPLE_HTML  = ROOT / "people.html"
+MEMBERS_JSON = Path("members/members.json")
+PEOPLE_HTML  = Path("people.html")
 
 ROLE_ORDER = ["PI", "postdoc", "phd student", "ms student", "undergrad", "staff", "alumni"]
 GROUP_URLS = {
-    "energy flexibility":   "research/energyflexibility.html",
-    "water and wastewater": "research/waterandwastewater.html",
-    "systems planning":     "research/systemsplanning.html",
-    "water technology":     "research/watertechnology.html",
+    "energy flexibility": "research/energyflexibility.html",
+    "infrastructure planning": "research/infrastructureplanning.html",
+    "separations": "research/separations.html",
+    "water technology": "research/watertechnology.html",
 }
+
 GROUP_LABELS = {
     "energy flexibility":   "Energy Flexibility",
     "water and wastewater": "Water and Wastewater",
@@ -59,7 +59,7 @@ def build_links(m):
     if scholar_url:
         parts.append(f'<a href="{scholar_url}" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>')
     if m.get("linkedin"):
-        parts.append(f'<a href="{m["linkedin"]}" target="_blank" rel="noopener">LinkedIn</a>')
+        parts.append(f'<a href="{m["linkedin"]}" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>')
     if m.get("website"):
         parts.append(f'<a href="{m["website"]}" target="_blank" rel="noopener">Web</a>')
     if m.get("cv"):
