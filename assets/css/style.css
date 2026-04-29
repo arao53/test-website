@@ -253,7 +253,7 @@ p:last-child { margin-bottom: 0; }
 .pi-card, .pi-card:hover { transform: none; box-shadow: var(--shadow-sm); cursor: default; }
 .person-avatar {
   width: 100px; height: 100px;
-  border-radius: 50%; overflow: hidden;
+  border-radius: 20%; overflow: hidden;
   margin: 0 auto 1rem;
   background: var(--teal);
   display: flex; align-items: center; justify-content: center;

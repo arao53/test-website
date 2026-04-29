@@ -50,6 +50,16 @@ def initials(name):
     return (parts[0][0] + parts[-1][0]).upper()
 
 
+def avatar_html(m, av, extra_style=""):
+    clean = re.sub(r"^Dr\.\s+", "", m["name"], flags=re.IGNORECASE).strip()
+    slug = (re.sub(" ", "",clean)).lower() + ".png"
+    img_path = Path("members/images") / slug
+    style_attr = f' style="{extra_style}"' if extra_style else ""
+    if img_path.exists():
+        return f'<div class="person-avatar {av}"{style_attr}><img src="members/images/{slug}" alt="{m["name"]}"></div>'
+    return f'<div class="person-avatar {av}"{style_attr}>{initials(m["name"])}</div>'
+
+
 def build_links(m):
     parts = []
     scholar_url = m.get("scholar_url") or (
@@ -73,7 +83,7 @@ def card_pi(m, av):
     links = build_links(m)
     bio   = m.get("bio", "")
     html  = f'''      <div class="person-card" style="display:flex;gap:1.5rem;text-align:left;padding:1.75rem;align-items:flex-start">
-        <div class="person-avatar {av}" style="width:90px;height:90px;font-size:1.5rem;flex-shrink:0">{initials(m["name"])}</div>
+        {avatar_html(m, av, "width:90px;height:90px;font-size:1.5rem;flex-shrink:0")}
         <div>
           <h4>{m["name"]}</h4>
           <div class="role">Principal Investigator</div>'''
@@ -89,7 +99,7 @@ def card_alumni(m, av):
     degree_year = m.get("degree_year", "")
     placement   = m.get("placement", "")
     html = f'      <div class="person-card alumni-card">\n'
-    html += f'        <div class="person-avatar {av}">{initials(m["name"])}</div>\n'
+    html += f'        {avatar_html(m, av)}\n'
     html += '        <div class="info">\n'
     html += f'          <h4>{m["name"]}</h4>\n'
     if degree_year:
@@ -105,7 +115,7 @@ def card_member(m, av):
     groups = m.get("groups") or []
     links = build_links(m)
     html  = f'      <div class="person-card">\n'
-    html += f'        <div class="person-avatar {av}">{initials(m["name"])}</div>\n'
+    html += f'        {avatar_html(m, av)}\n'
     html += f'        <h4>{m["name"]}</h4>\n'
     html += f'        <div class="role">{role_text}</div>\n'
     if groups:
